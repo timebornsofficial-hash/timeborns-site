@@ -357,13 +357,13 @@ body::before {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(200,169,110,0.3);
-  margin-top: 56px;
-  padding-top: 48px;
+  margin-top: 48px;
+  padding-top: 40px;
   gap: 0;
 }
 .pillar {
   text-align: center;
-  padding: 0 24px 8px;
+  padding: 0 24px 20px;
 }
 .pillar + .pillar { border-left: 1px solid rgba(200,169,110,0.25); }
 .pillar-img-wrap {
@@ -465,6 +465,20 @@ body::before {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  transition: transform 0.38s ease;
+}
+
+.app-card:hover .card-illust { transform: scale(1.04); }
+
+/* Top gradient overlay for card name readability */
+.app-card-visual::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 68px;
+  background: linear-gradient(to bottom, rgba(18,12,6,0.42) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Card name overlaid at top-center of illustration */
