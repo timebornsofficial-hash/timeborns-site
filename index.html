@@ -61,321 +61,11 @@
         </div>
       </div>
 
-      <!-- Right: Rich atmospheric illustration -->
+      <!-- Right: Hero image -->
       <div class="hero-visual" aria-hidden="true">
-        <svg viewBox="0 0 560 640" fill="none" xmlns="http://www.w3.org/2000/svg"
-             style="width:100%;height:100%;" role="img"
-             aria-label="Atmospheric hourglass illustration with landscape, journal and botanical elements">
-          <defs>
-            <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#f6f1e5"/>
-              <stop offset="28%"  stop-color="#f2ead4"/>
-              <stop offset="58%"  stop-color="#ecd9bc"/>
-              <stop offset="82%"  stop-color="#e2caa4"/>
-              <stop offset="100%" stop-color="#d8be94"/>
-            </linearGradient>
-            <radialGradient id="hhorizon" cx="52%" cy="62%" r="48%">
-              <stop offset="0%"   stop-color="#f5c870" stop-opacity="0.38"/>
-              <stop offset="45%"  stop-color="#e8a840" stop-opacity="0.15"/>
-              <stop offset="100%" stop-color="#c8903a" stop-opacity="0"/>
-            </radialGradient>
-            <radialGradient id="hg-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"   stop-color="#e8c870" stop-opacity="0.35"/>
-              <stop offset="60%"  stop-color="#c8a96e" stop-opacity="0.12"/>
-              <stop offset="100%" stop-color="#c8a96e" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="hg-glass-upper" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%"   stop-color="#a87830" stop-opacity="0.22"/>
-              <stop offset="32%"  stop-color="#e8d5a0" stop-opacity="0.48"/>
-              <stop offset="65%"  stop-color="#f0e4b8" stop-opacity="0.38"/>
-              <stop offset="100%" stop-color="#a87830" stop-opacity="0.18"/>
-            </linearGradient>
-            <linearGradient id="hg-glass-lower" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%"   stop-color="#a87830" stop-opacity="0.18"/>
-              <stop offset="35%"  stop-color="#e0cc90" stop-opacity="0.42"/>
-              <stop offset="68%"  stop-color="#ead8a8" stop-opacity="0.35"/>
-              <stop offset="100%" stop-color="#a87830" stop-opacity="0.15"/>
-            </linearGradient>
-            <linearGradient id="hg-sand-top" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#f0d878"/>
-              <stop offset="55%"  stop-color="#d4a848"/>
-              <stop offset="100%" stop-color="#a87c28"/>
-            </linearGradient>
-            <linearGradient id="hg-sand-btm" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#c8a040"/>
-              <stop offset="100%" stop-color="#7a5810"/>
-            </linearGradient>
-            <linearGradient id="hbook-l" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#f8f4ea"/>
-              <stop offset="100%" stop-color="#ede8d8"/>
-            </linearGradient>
-            <linearGradient id="hbook-r" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%"   stop-color="#f0ece0"/>
-              <stop offset="100%" stop-color="#e4dece"/>
-            </linearGradient>
-            <filter id="h-mist"><feGaussianBlur stdDeviation="6"/></filter>
-            <filter id="h-soft"><feGaussianBlur stdDeviation="2.5"/></filter>
-            <filter id="h-glow"><feGaussianBlur stdDeviation="12" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
-            <filter id="h-paint">
-              <feTurbulence type="fractalNoise" baseFrequency="0.04 0.03" numOctaves="3" seed="3" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
-            </filter>
-            <clipPath id="h-clip"><rect width="560" height="640"/></clipPath>
-          </defs>
-          <g clip-path="url(#h-clip)">
-
-          <!-- ── Sky base ── -->
-          <rect width="560" height="640" fill="url(#hsky)"/>
-          <ellipse cx="308" cy="420" rx="320" ry="240" fill="url(#hhorizon)"/>
-
-          <!-- ── Atmospheric mist layers ── -->
-          <ellipse cx="80"  cy="55"  rx="140" ry="48" fill="#f8ecc0" fill-opacity="0.2"  filter="url(#h-mist)"/>
-          <ellipse cx="420" cy="40"  rx="110" ry="38" fill="#f8ecc0" fill-opacity="0.16" filter="url(#h-mist)"/>
-          <ellipse cx="240" cy="90"  rx="180" ry="42" fill="#f0dc98" fill-opacity="0.13" filter="url(#h-mist)"/>
-          <ellipse cx="500" cy="110" rx="80"  ry="30" fill="#f8ecc0" fill-opacity="0.1"  filter="url(#h-mist)"/>
-
-          <!-- ── Mountain silhouettes — far range ── -->
-          <path d="M0 440 Q38 408 82 424 Q128 394 175 412 Q220 388 268 406 Q315 382 365 402 Q412 378 462 396 Q498 382 560 400 L560 468 L0 468 Z"
-                fill="#c0a878" fill-opacity="0.3" filter="url(#h-mist)"/>
-
-          <!-- ── Mountain silhouettes — mid range ── -->
-          <path d="M0 456 Q42 430 88 446 Q138 416 185 434 Q232 412 280 428 Q328 408 378 426 Q425 408 475 424 L560 432 L560 488 L0 488 Z"
-                fill="#9e8660" fill-opacity="0.42" filter="url(#h-paint)"/>
-
-          <!-- ── Mountain silhouettes — near range ── -->
-          <path d="M0 472 Q50 448 100 462 Q152 436 205 452 Q255 428 305 446 Q358 424 410 442 Q458 426 510 442 L560 450 L560 500 L0 500 Z"
-                fill="#7e6840" fill-opacity="0.38" filter="url(#h-paint)"/>
-
-          <!-- ── Water horizon ── -->
-          <ellipse cx="280" cy="506" rx="300" ry="40" fill="#c8b880" fill-opacity="0.22"/>
-          <path d="M60 498 Q180 493 280 498 Q380 503 500 498"
-                stroke="#c8a96e" stroke-width="1" fill="none" opacity="0.28"/>
-          <path d="M100 508 Q200 505 280 508 Q360 511 460 508"
-                stroke="#c8a96e" stroke-width="0.7" fill="none" opacity="0.18"/>
-
-          <!-- ── Sailing boat (tiny, distant) ── -->
-          <g transform="translate(105,495)" opacity="0.28">
-            <path d="M0 13 L7 0 L14 13 Z" fill="#7a6040"/>
-            <line x1="7" y1="0" x2="7" y2="15" stroke="#7a6040" stroke-width="1.3"/>
-            <path d="M-5 15 Q7 17 19 15" stroke="#7a6040" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-          </g>
-
-          <!-- ── Clock ring (large, behind hourglass) ── -->
-          <circle cx="295" cy="270" r="208" stroke="#c8a96e" stroke-width="1.2" fill="none" opacity="0.16"/>
-          <circle cx="295" cy="270" r="196" stroke="#c8a96e" stroke-width="0.6" fill="none" opacity="0.1"/>
-          <!-- Roman numerals -->
-          <text x="295" y="74"  text-anchor="middle" fill="#8b6914" opacity="0.32" font-size="13" font-family="Georgia,serif">XII</text>
-          <text x="295" y="474" text-anchor="middle" fill="#8b6914" opacity="0.32" font-size="13" font-family="Georgia,serif">VI</text>
-          <text x="499" y="276" text-anchor="middle" fill="#8b6914" opacity="0.32" font-size="13" font-family="Georgia,serif">III</text>
-          <text x="92"  y="276" text-anchor="middle" fill="#8b6914" opacity="0.32" font-size="13" font-family="Georgia,serif">IX</text>
-          <text x="442" y="128" text-anchor="middle" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif">II</text>
-          <text x="150" y="128" text-anchor="middle" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif">X</text>
-          <text x="442" y="424" text-anchor="middle" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif">IV</text>
-          <text x="150" y="424" text-anchor="middle" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif">VIII</text>
-          <!-- Clock tick marks -->
-          <line x1="295" y1="64"  x2="295" y2="80"  stroke="#c8a96e" stroke-width="1.5" opacity="0.22"/>
-          <line x1="295" y1="462" x2="295" y2="478" stroke="#c8a96e" stroke-width="1.5" opacity="0.22"/>
-          <line x1="87"  y1="270" x2="103" y2="270" stroke="#c8a96e" stroke-width="1.5" opacity="0.22"/>
-          <line x1="489" y1="270" x2="505" y2="270" stroke="#c8a96e" stroke-width="1.5" opacity="0.22"/>
-          <line x1="147" y1="123" x2="157" y2="133" stroke="#c8a96e" stroke-width="1" opacity="0.16"/>
-          <line x1="435" y1="123" x2="445" y2="133" stroke="#c8a96e" stroke-width="1" opacity="0.16"/>
-          <line x1="147" y1="409" x2="157" y2="419" stroke="#c8a96e" stroke-width="1" opacity="0.16"/>
-          <line x1="435" y1="409" x2="445" y2="419" stroke="#c8a96e" stroke-width="1" opacity="0.16"/>
-
-          <!-- ── Hourglass glow aura ── -->
-          <ellipse cx="295" cy="265" rx="110" ry="110" fill="url(#hg-glow)" filter="url(#h-soft)"/>
-
-          <!-- ── Hourglass pillars ── -->
-          <rect x="188" y="128" width="10" height="308" rx="5" fill="#7a5a18" fill-opacity="0.55"/>
-          <rect x="402" y="128" width="10" height="308" rx="5" fill="#7a5a18" fill-opacity="0.55"/>
-          <!-- Pillar caps (top) -->
-          <ellipse cx="193" cy="128" rx="7" ry="4" fill="#a07828" fill-opacity="0.6"/>
-          <ellipse cx="407" cy="128" rx="7" ry="4" fill="#a07828" fill-opacity="0.6"/>
-          <!-- Pillar caps (bottom) -->
-          <ellipse cx="193" cy="436" rx="7" ry="4" fill="#a07828" fill-opacity="0.55"/>
-          <ellipse cx="407" cy="436" rx="7" ry="4" fill="#a07828" fill-opacity="0.55"/>
-
-          <!-- ── Hourglass top cap ── -->
-          <rect x="178" y="116" width="234" height="16" rx="8" fill="#7a5818" fill-opacity="0.88"/>
-          <rect x="184" y="117" width="222" height="6"  rx="3" fill="#c8a96e" fill-opacity="0.38"/>
-          <rect x="184" y="117" width="222" height="3"  rx="1.5" fill="#e8d090" fill-opacity="0.22"/>
-
-          <!-- ── Hourglass bottom cap ── -->
-          <rect x="178" y="436" width="234" height="16" rx="8" fill="#7a5818" fill-opacity="0.88"/>
-          <rect x="184" y="437" width="222" height="6"  rx="3" fill="#c8a96e" fill-opacity="0.32"/>
-
-          <!-- ── Hourglass upper bulb ── -->
-          <path d="M195 132 L405 132 L336 265 L254 265 Z"
-                fill="url(#hg-glass-upper)" stroke="#8b6914" stroke-width="2.5" stroke-linejoin="round"/>
-          <!-- Glass highlight (left edge reflection) -->
-          <path d="M198 135 L222 135 L198 230" stroke="#f0e4c0" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round"/>
-          <!-- Sand in upper bulb -->
-          <path d="M210 142 Q295 134 380 142 L336 265 L254 265 Z"
-                fill="url(#hg-sand-top)" fill-opacity="0.58"/>
-          <!-- Sand surface highlight -->
-          <path d="M214 148 Q295 140 376 148" stroke="#f0e080" stroke-width="1.5" fill="none" opacity="0.3"/>
-
-          <!-- ── Sand stream at waist ── -->
-          <path d="M293 262 Q295 272 297 286 Q295 300 293 314"
-                stroke="#e8c870" stroke-width="3" stroke-linecap="round" opacity="0.65"/>
-          <path d="M295 268 Q297 280 299 292 Q297 304 295 316"
-                stroke="#f0d880" stroke-width="1.2" stroke-linecap="round" opacity="0.35"/>
-
-          <!-- ── Hourglass lower bulb ── -->
-          <path d="M254 265 L336 265 L405 436 L195 436 Z"
-                fill="url(#hg-glass-lower)" stroke="#8b6914" stroke-width="2.5" stroke-linejoin="round"/>
-          <!-- Glass highlight -->
-          <path d="M257 268 L240 380" stroke="#f0e4c0" stroke-width="1.5" fill="none" opacity="0.25" stroke-linecap="round"/>
-          <!-- Sand pile in lower bulb -->
-          <path d="M215 428 Q248 404 270 414 Q290 404 310 418 Q330 408 350 420 Q370 410 395 428 L405 436 L195 436 Z"
-                fill="url(#hg-sand-btm)" fill-opacity="0.62"/>
-          <!-- Sand surface highlight -->
-          <path d="M228 424 Q265 412 295 418 Q325 412 360 422"
-                stroke="#e8c050" stroke-width="1.2" fill="none" opacity="0.28"/>
-
-          <!-- ── Botanical sprout from hourglass top ── -->
-          <!-- Main stems -->
-          <path d="M295 116 Q284 96 272 76 Q264 58 272 44"
-                stroke="#7a5a18" stroke-width="2.8" fill="none" opacity="0.7" stroke-linecap="round"/>
-          <path d="M295 116 Q308 94 322 74 Q332 56 322 42"
-                stroke="#7a5a18" stroke-width="2.8" fill="none" opacity="0.7" stroke-linecap="round"/>
-          <path d="M295 116 Q295 96 295 76 Q295 60 292 46"
-                stroke="#7a5a18" stroke-width="2.2" fill="none" opacity="0.6" stroke-linecap="round"/>
-          <!-- Sub-branches -->
-          <path d="M280 72 Q270 58 265 46"
-                stroke="#7a5a18" stroke-width="1.8" fill="none" opacity="0.55" stroke-linecap="round"/>
-          <path d="M280 72 Q272 62 275 50"
-                stroke="#7a5a18" stroke-width="1.5" fill="none" opacity="0.48" stroke-linecap="round"/>
-          <path d="M315 70 Q325 56 328 44"
-                stroke="#7a5a18" stroke-width="1.8" fill="none" opacity="0.55" stroke-linecap="round"/>
-          <!-- Leaves — larger, more detailed -->
-          <ellipse cx="268" cy="46" rx="16" ry="9" fill="#7a5818" fill-opacity="0.58" transform="rotate(-35,268,46)"/>
-          <ellipse cx="325" cy="44" rx="16" ry="9" fill="#7a5818" fill-opacity="0.58" transform="rotate(38,325,44)"/>
-          <ellipse cx="292" cy="62" rx="12" ry="7" fill="#7a5818" fill-opacity="0.5"  transform="rotate(-8,292,62)"/>
-          <ellipse cx="265" cy="58" rx="10" ry="6" fill="#7a5818" fill-opacity="0.45" transform="rotate(-50,265,58)"/>
-          <ellipse cx="330" cy="56" rx="10" ry="6" fill="#7a5818" fill-opacity="0.45" transform="rotate(45,330,56)"/>
-          <ellipse cx="282" cy="80" rx="8"  ry="5" fill="#7a5818" fill-opacity="0.4"  transform="rotate(-20,282,80)"/>
-          <ellipse cx="310" cy="78" rx="8"  ry="5" fill="#7a5818" fill-opacity="0.4"  transform="rotate(22,310,78)"/>
-          <!-- Berries / buds -->
-          <circle cx="264" cy="38" r="4"   fill="#8b6914" fill-opacity="0.52"/>
-          <circle cx="328" cy="36" r="4"   fill="#8b6914" fill-opacity="0.48"/>
-          <circle cx="290" cy="44" r="3"   fill="#8b6914" fill-opacity="0.44"/>
-          <circle cx="272" cy="54" r="2.5" fill="#c8a96e" fill-opacity="0.35"/>
-          <circle cx="318" cy="52" r="2.5" fill="#c8a96e" fill-opacity="0.35"/>
-
-          <!-- ── Open journal / book (lower foreground) ── -->
-          <g transform="translate(98, 485)">
-            <!-- Book shadow -->
-            <ellipse cx="186" cy="110" rx="195" ry="18" fill="#a07828" fill-opacity="0.18" filter="url(#h-soft)"/>
-            <!-- Left page -->
-            <path d="M0 45 Q78 30 156 42 L156 118 Q78 134 0 118 Z"
-                  fill="url(#hbook-l)" fill-opacity="0.94"/>
-            <!-- Right page -->
-            <path d="M156 42 Q234 28 312 42 L312 118 Q234 134 156 118 Z"
-                  fill="url(#hbook-r)" fill-opacity="0.9"/>
-            <!-- Spine -->
-            <path d="M152 40 L160 40 L160 120 L152 120 Z" fill="#b89858" fill-opacity="0.45"/>
-            <!-- Page curl edge (left) -->
-            <path d="M0 45 Q-4 82 0 118" stroke="#d4c898" stroke-width="1.5" fill="none" opacity="0.35"/>
-            <!-- Page curl edge (right) -->
-            <path d="M312 42 Q316 80 312 118" stroke="#c4b888" stroke-width="1.5" fill="none" opacity="0.3"/>
-            <!-- Handwriting lines — left page (more detailed, slightly curved) -->
-            <path d="M16 64 Q86 59 148 62"  stroke="#8a7850" stroke-width="1"   fill="none" opacity="0.55"/>
-            <path d="M16 73 Q84 68 146 71"  stroke="#8a7850" stroke-width="0.95" fill="none" opacity="0.48"/>
-            <path d="M16 82 Q88 77 148 80"  stroke="#8a7850" stroke-width="0.9"  fill="none" opacity="0.5"/>
-            <path d="M16 91 Q82 86 144 89"  stroke="#8a7850" stroke-width="0.9"  fill="none" opacity="0.44"/>
-            <path d="M16 100 Q86 95 148 98" stroke="#8a7850" stroke-width="0.85" fill="none" opacity="0.46"/>
-            <path d="M16 109 Q80 104 140 107" stroke="#8a7850" stroke-width="0.8" fill="none" opacity="0.38"/>
-            <!-- Handwriting lines — right page -->
-            <path d="M166 62 Q234 58 304 61"  stroke="#8a7850" stroke-width="0.9"  fill="none" opacity="0.42"/>
-            <path d="M166 71 Q232 67 302 70"  stroke="#8a7850" stroke-width="0.85" fill="none" opacity="0.38"/>
-            <path d="M166 80 Q236 76 304 79"  stroke="#8a7850" stroke-width="0.9"  fill="none" opacity="0.4"/>
-            <path d="M166 89 Q230 85 298 88"  stroke="#8a7850" stroke-width="0.8"  fill="none" opacity="0.34"/>
-            <path d="M166 98 Q234 94 304 97"  stroke="#8a7850" stroke-width="0.8"  fill="none" opacity="0.36"/>
-            <!-- Pressed botanical leaf on right page -->
-            <path d="M188 108 Q204 96 220 108 Q204 120 188 108 Z" fill="#6a8848" fill-opacity="0.35"/>
-            <line x1="204" y1="96" x2="204" y2="120" stroke="#5a7838" stroke-width="1" fill="none" opacity="0.4"/>
-            <!-- Ink stain / gold splotch -->
-            <ellipse cx="260" cy="106" rx="6" ry="4" fill="#c8a030" fill-opacity="0.2" transform="rotate(-10,260,106)"/>
-            <!-- Pen resting on right page -->
-            <line x1="270" y1="100" x2="308" y2="116" stroke="#4a3018" stroke-width="3" stroke-linecap="round" opacity="0.88"/>
-            <ellipse cx="268" cy="99" rx="3" ry="3" fill="#7a5830" fill-opacity="0.72"/>
-            <line x1="306" y1="115" x2="314" y2="119" stroke="#3a2010" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
-          </g>
-
-          <!-- ── Coffee mug (right of journal) ── -->
-          <g transform="translate(432, 502)">
-            <path d="M10 24 Q8 26 8 58 Q8 67 16 68 L50 68 Q58 66 58 58 L58 24 Z"
-                  fill="#9a7a5a" fill-opacity="0.84"/>
-            <!-- Ceramic speckle texture -->
-            <circle cx="22" cy="36" r="1.8" fill="#7a5838" fill-opacity="0.3"/>
-            <circle cx="38" cy="30" r="1.5" fill="#7a5838" fill-opacity="0.28"/>
-            <circle cx="30" cy="50" r="1.6" fill="#7a5838" fill-opacity="0.3"/>
-            <circle cx="48" cy="44" r="1.4" fill="#7a5838" fill-opacity="0.26"/>
-            <circle cx="18" cy="54" r="1.3" fill="#7a5838" fill-opacity="0.28"/>
-            <ellipse cx="33" cy="24" rx="25" ry="6.5" fill="#b09870" fill-opacity="0.78"/>
-            <ellipse cx="33" cy="24" rx="21" ry="4.5" fill="#2e1808" fill-opacity="0.68"/>
-            <!-- Handle -->
-            <path d="M57 34 Q76 34 76 50 Q76 66 57 66"
-                  stroke="#7a5838" stroke-width="5.5" fill="none" stroke-linecap="round" opacity="0.9"/>
-            <!-- Steam wisps -->
-            <path d="M20 18 Q16 8 20 0"  stroke="#ece8d8" stroke-width="1.4" fill="none" opacity="0.38" stroke-linecap="round"/>
-            <path d="M33 16 Q29 6 33 -2" stroke="#ece8d8" stroke-width="1.4" fill="none" opacity="0.33" stroke-linecap="round"/>
-            <path d="M46 18 Q42 8 46 0"  stroke="#ece8d8" stroke-width="1.4" fill="none" opacity="0.3"  stroke-linecap="round"/>
-          </g>
-
-          <!-- ── Sitting figure on distant shore ── -->
-          <g transform="translate(72,492)" opacity="0.45">
-            <!-- Rock -->
-            <ellipse cx="14" cy="34" rx="22" ry="9" fill="#5a4428" fill-opacity="0.9"/>
-            <!-- Body (sitting, looking toward landscape) -->
-            <path d="M8 28 Q11 15 16 12 Q21 10 24 15 Q27 20 24 25 Q20 29 11 31 Z"
-                  fill="#3c2c14" fill-opacity="0.92"/>
-            <circle cx="17" cy="10" r="6" fill="#3c2c14" fill-opacity="0.92"/>
-            <path d="M8 27 Q3 30 0 35"  stroke="#3c2c14" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.88"/>
-            <path d="M12 29 Q9 34 7 38"  stroke="#3c2c14" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.88"/>
-          </g>
-
-          <!-- ── Handwriting script fragments (atmospheric) ── -->
-          <text x="428" y="188" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif" font-style="italic" transform="rotate(-3,428,188)">Born through</text>
-          <text x="436" y="204" fill="#8b6914" opacity="0.22" font-size="11" font-family="Georgia,serif" font-style="italic" transform="rotate(-3,436,204)">time...</text>
-          <line x1="426" y1="210" x2="500" y2="208" stroke="#8b6914" stroke-width="0.6" opacity="0.14"/>
-          <line x1="426" y1="218" x2="494" y2="216" stroke="#8b6914" stroke-width="0.5" opacity="0.1"/>
-          <text x="118" y="320" fill="#8b6914" opacity="0.18" font-size="10" font-family="Georgia,serif" font-style="italic" transform="rotate(-8,118,320)">shaped by</text>
-          <text x="112" y="334" fill="#8b6914" opacity="0.18" font-size="10" font-family="Georgia,serif" font-style="italic" transform="rotate(-8,112,334)">memory...</text>
-
-          <!-- ── Torn paper fragment (lower-right, decorative) ── -->
-          <path d="M410 370 Q426 358 445 368 Q460 354 478 366 Q492 354 510 366
-                    L510 448 Q494 442 475 450 Q456 444 435 450 Q418 444 408 448 Z"
-                fill="#dfd4b8" fill-opacity="0.62"/>
-          <path d="M410 370 Q418 362 428 368 Q438 356 448 364 Q458 352 468 362 Q478 352 490 360 Q500 352 510 362"
-                fill="#dfd4b8" fill-opacity="0.45" stroke="#c8b898" stroke-width="0.5"/>
-          <text x="420" y="398" fill="#8b6914" opacity="0.45" font-size="10.5" font-family="Georgia,serif" font-style="italic">We don't chase</text>
-          <text x="424" y="414" fill="#8b6914" opacity="0.45" font-size="10.5" font-family="Georgia,serif" font-style="italic">time. We grow</text>
-          <text x="430" y="430" fill="#8b6914" opacity="0.45" font-size="10.5" font-family="Georgia,serif" font-style="italic">with it.</text>
-          <!-- Gold botanical on torn paper -->
-          <path d="M496 438 Q500 428 496 418" stroke="#c8a96e" stroke-width="1.2" fill="none" opacity="0.35" stroke-linecap="round"/>
-          <ellipse cx="494" cy="420" rx="6" ry="3.5" fill="#c8a96e" fill-opacity="0.28" transform="rotate(-40,494,420)"/>
-          <ellipse cx="498" cy="430" rx="5" ry="3" fill="#c8a96e" fill-opacity="0.25" transform="rotate(-25,498,430)"/>
-
-          <!-- ── Left edge botanical decoration ── -->
-          <path d="M95 390 Q108 362 124 338 Q114 356 100 378"
-                stroke="#9a7a38" stroke-width="1.8" fill="none" opacity="0.35" stroke-linecap="round"/>
-          <path d="M95 390 Q115 375 130 355 Q118 368 102 384"
-                stroke="#9a7a38" stroke-width="1.4" fill="none" opacity="0.28" stroke-linecap="round"/>
-          <ellipse cx="122" cy="340" rx="14" ry="8"  fill="#9a7a38" fill-opacity="0.25" transform="rotate(-48,122,340)"/>
-          <ellipse cx="108" cy="356" rx="12" ry="7"  fill="#9a7a38" fill-opacity="0.22" transform="rotate(-32,108,356)"/>
-          <ellipse cx="98"  cy="374" rx="10" ry="6"  fill="#9a7a38" fill-opacity="0.2"  transform="rotate(-18,98,374)"/>
-          <ellipse cx="130" cy="352" rx="9"  ry="5.5" fill="#9a7a38" fill-opacity="0.18" transform="rotate(-58,130,352)"/>
-
-          <!-- ── Birds in sky ── -->
-          <path d="M360 90 Q364 86 368 90 Q372 86 376 90" stroke="#9a8860" stroke-width="1.4" fill="none" opacity="0.25"/>
-          <path d="M380 73 Q384 70 388 73 Q392 70 396 73" stroke="#9a8860" stroke-width="1.2" fill="none" opacity="0.2"/>
-          <path d="M335 76 Q339 73 343 76 Q347 73 351 76" stroke="#9a8860" stroke-width="1.2" fill="none" opacity="0.18"/>
-          <path d="M405 100 Q408 97 411 100 Q414 97 417 100" stroke="#9a8860" stroke-width="1" fill="none" opacity="0.15"/>
-
-          </g>
-        </svg>
+        <img src="assets/images/hero-timeborns.png"
+             alt="Atmospheric Timeborns hero illustration with hourglass, journal, and botanical elements"
+             class="hero-img">
       </div>
     </section>
 
@@ -409,80 +99,29 @@
             </p>
           </div>
           <aside class="phil-note" aria-hidden="true">
-            <p>We don't chase time.</p>
-            <span class="phil-note-gold"></span>
-            <p>We grow with it.</p>
+            <img src="assets/images/philosophy-note.png" alt="" class="phil-note-img">
           </aside>
         </div>
 
         <!-- Three Pillars -->
         <div class="pillars" role="list">
           <div class="pillar" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Arch / doorway through time -->
-                <path d="M10 56 L10 30 Q10 12 32 12 Q54 12 54 30 L54 56"
-                      stroke="#8b6914" stroke-width="2" fill="none" stroke-linecap="round"/>
-                <rect x="6" y="52" width="52" height="5" rx="2.5" fill="#c8a96e" fill-opacity="0.45"/>
-                <path d="M22 56 L22 34 Q22 24 32 24 Q42 24 42 34 L42 56"
-                      stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                <!-- Figure through arch -->
-                <circle cx="32" cy="36" r="3" fill="#8b6914" fill-opacity="0.5"/>
-                <line x1="32" y1="39" x2="32" y2="50" stroke="#8b6914" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-                <!-- Stars above arch -->
-                <circle cx="32" cy="6"  r="1.5" fill="#c8a96e" fill-opacity="0.5"/>
-                <circle cx="24" cy="9"  r="1"   fill="#c8a96e" fill-opacity="0.4"/>
-                <circle cx="40" cy="9"  r="1"   fill="#c8a96e" fill-opacity="0.4"/>
-              </svg>
+            <div class="pillar-img-wrap" aria-hidden="true">
+              <img src="assets/images/philosophy-remember.png" alt="" class="pillar-img">
             </div>
             <h3 class="pillar-title">Remember the past</h3>
             <p class="pillar-body">Honor your story.<br>It shaped you.</p>
           </div>
           <div class="pillar" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Compass rose -->
-                <circle cx="32" cy="32" r="24" stroke="#8b6914" stroke-width="1.5" fill="none" opacity="0.5"/>
-                <circle cx="32" cy="32" r="3.5" fill="#c8a96e"/>
-                <!-- North pointer (dark, prominent) -->
-                <path d="M32 8 L35 26 L32 24 L29 26 Z" fill="#8b6914" fill-opacity="0.8"/>
-                <!-- South pointer (lighter) -->
-                <path d="M32 56 L29 38 L32 40 L35 38 Z" fill="#8b6914" fill-opacity="0.4"/>
-                <!-- East -->
-                <path d="M56 32 L38 35 L40 32 L38 29 Z" fill="#8b6914" fill-opacity="0.4"/>
-                <!-- West -->
-                <path d="M8 32 L26 29 L24 32 L26 35 Z" fill="#8b6914" fill-opacity="0.4"/>
-                <!-- Cross lines -->
-                <line x1="32" y1="12" x2="32" y2="52" stroke="#c8a96e" stroke-width="0.5" opacity="0.3"/>
-                <line x1="12" y1="32" x2="52" y2="32" stroke="#c8a96e" stroke-width="0.5" opacity="0.3"/>
-                <!-- Diagonal faint -->
-                <line x1="15" y1="15" x2="49" y2="49" stroke="#c8a96e" stroke-width="0.4" opacity="0.18"/>
-                <line x1="49" y1="15" x2="15" y2="49" stroke="#c8a96e" stroke-width="0.4" opacity="0.18"/>
-              </svg>
+            <div class="pillar-img-wrap" aria-hidden="true">
+              <img src="assets/images/philosophy-organize.png" alt="" class="pillar-img">
             </div>
             <h3 class="pillar-title">Organize the present</h3>
             <p class="pillar-body">Clarity today<br>creates freedom.</p>
           </div>
           <div class="pillar" role="listitem">
-            <div class="pillar-icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Path leading to sunrise -->
-                <path d="M8 56 Q22 44 32 40 Q42 36 56 56" stroke="#8b6914" stroke-width="2"
-                      fill="none" stroke-linecap="round"/>
-                <!-- Sun rays -->
-                <path d="M32 36 L32 22"  stroke="#c8a96e" stroke-width="2" stroke-linecap="round"/>
-                <path d="M22 24 L16 18"  stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-                <path d="M42 24 L48 18"  stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
-                <path d="M18 32 L10 32"  stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                <path d="M46 32 L54 32"  stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
-                <path d="M20 42 L14 46"  stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
-                <path d="M44 42 L50 46"  stroke="#c8a96e" stroke-width="1.2" stroke-linecap="round" opacity="0.45"/>
-                <!-- Sun disc -->
-                <circle cx="32" cy="32" r="8" fill="#c8a96e" fill-opacity="0.7"/>
-                <circle cx="32" cy="32" r="5" fill="#e8d080" fill-opacity="0.5"/>
-                <!-- Horizon line -->
-                <line x1="8" y1="56" x2="56" y2="56" stroke="#c8a96e" stroke-width="1" opacity="0.4"/>
-              </svg>
+            <div class="pillar-img-wrap" aria-hidden="true">
+              <img src="assets/images/philosophy-change.png" alt="" class="pillar-img">
             </div>
             <h3 class="pillar-title">Change the future self</h3>
             <p class="pillar-body">Small choices now<br>build the life you dream of.</p>
@@ -515,8 +154,8 @@
           <article class="app-card app-card--dayfall" role="listitem">
             <a href="./dayfall/" aria-label="Learn more about Dayfall — recall calendar app">
               <div class="app-card-visual">
-                <img src="assets/illustrations/card-dayfall.svg"
-                     alt="Dayfall app — warm sunset scene with a lone figure by the water"
+                <img src="assets/images/app-dayfall.png"
+                     alt="Dayfall app illustration"
                      class="card-illust">
                 <span class="app-card-name">Dayfall</span>
               </div>
@@ -530,8 +169,8 @@
           <!-- W² (inactive placeholder) -->
           <article class="app-card app-card--w2 app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/illustrations/card-w2.svg"
-                   alt="W² app — whale in a starry deep ocean"
+              <img src="assets/images/app-w2.png"
+                   alt="W² app illustration"
                    class="card-illust">
               <span class="app-card-name">W²</span>
               <span class="app-card-coming">Coming soon</span>
@@ -545,8 +184,8 @@
           <!-- AfterNote (inactive placeholder) -->
           <article class="app-card app-card--afternote app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/illustrations/card-afternote.svg"
-                   alt="AfterNote app — quiet study desk with an open journal"
+              <img src="assets/images/app-afternote.png"
+                   alt="AfterNote app illustration"
                    class="card-illust">
               <span class="app-card-name">AfterNote</span>
               <span class="app-card-coming">Coming soon</span>
@@ -560,8 +199,8 @@
           <!-- FutureMe (inactive placeholder) -->
           <article class="app-card app-card--futureme app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/illustrations/card-futureme.svg"
-                   alt="FutureMe app — vintage mailbox against a twilight sky"
+              <img src="assets/images/app-futureme.png"
+                   alt="FutureMe app illustration"
                    class="card-illust">
               <span class="app-card-name">FutureMe</span>
               <span class="app-card-coming">Coming soon</span>
@@ -575,8 +214,8 @@
           <!-- LifeRules (inactive placeholder) -->
           <article class="app-card app-card--liferules app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/illustrations/card-liferules.svg"
-                   alt="LifeRules app — solitary tree on a golden hillside path"
+              <img src="assets/images/app-liferules.png"
+                   alt="LifeRules app illustration"
                    class="card-illust">
               <span class="app-card-name">LifeRules</span>
               <span class="app-card-coming">Coming soon</span>

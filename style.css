@@ -173,8 +173,7 @@ body::before {
 .hero {
   min-height: 100vh;
   padding-top: var(--nav-h);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -186,11 +185,16 @@ body::before {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 75% 65% at 68% 50%, rgba(200,169,110,0.2) 0%, transparent 62%),
+    linear-gradient(108deg,
+      var(--parchment) 28%,
+      rgba(245,240,228,0.9) 44%,
+      rgba(245,240,228,0.45) 60%,
+      rgba(245,240,228,0.05) 80%
+    ),
     radial-gradient(ellipse 45% 40% at 18% 85%, rgba(200,169,110,0.1) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 30% at 85% 15%, rgba(232,213,163,0.12) 0%, transparent 60%),
-    var(--parchment);
-  z-index: 0;
+    radial-gradient(ellipse 35% 30% at 85% 15%, rgba(232,213,163,0.12) 0%, transparent 60%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Decorative corner botanical (bottom-left of hero) */
@@ -203,13 +207,16 @@ body::before {
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
-  z-index: 1;
+  z-index: 3;
   opacity: 0.9;
 }
 
 .hero-content {
-  position: relative; z-index: 2;
+  position: relative;
+  z-index: 4;
   padding: 80px 40px 80px 80px;
+  max-width: 580px;
+  flex-shrink: 0;
 }
 .hero-kicker {
   font-family: var(--font-accent);
@@ -246,12 +253,10 @@ body::before {
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .hero-visual {
-  position: relative; z-index: 2;
-  min-height: 620px;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  padding: 0;
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 60%;
+  z-index: 1;
   overflow: hidden;
 }
 .hero-visual svg {
@@ -259,6 +264,15 @@ body::before {
   width: 100%;
   height: 100%;
   min-height: 580px;
+}
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 /* ---- WAVE SEPARATOR ---- */
@@ -317,46 +331,25 @@ body::before {
   line-height: 1.7;
 }
 
-/* Torn paper note card (philosophy section — 3rd grid column, no overlap) */
+/* Torn paper note card (philosophy section — 3rd grid column, image-based) */
 .phil-note {
   position: relative;
   top: auto; right: auto;
   width: 100%;
-  padding: 18px 20px 22px;
-  background: var(--parchment-dark);
+  padding: 0;
+  background: transparent;
   transform: rotate(3deg);
-  box-shadow: 3px 4px 14px rgba(44,36,22,0.16);
   align-self: start;
   margin-top: 8px;
 }
-.phil-note::before {
-  content: '';
-  position: absolute;
-  top: -9px; left: 0; right: 0;
-  height: 10px;
-  background: var(--parchment-dark);
-  clip-path: polygon(0% 100%, 3% 0%, 6% 100%, 9% 0%, 12% 100%, 15% 0%, 18% 100%, 21% 0%, 24% 100%, 27% 0%, 30% 100%, 33% 0%, 36% 100%, 39% 0%, 42% 100%, 45% 0%, 48% 100%, 51% 0%, 54% 100%, 57% 0%, 60% 100%, 63% 0%, 66% 100%, 69% 0%, 72% 100%, 75% 0%, 78% 100%, 81% 0%, 84% 100%, 87% 0%, 90% 100%, 93% 0%, 96% 100%, 100% 0%);
-}
-.phil-note::after {
-  content: '';
-  position: absolute;
-  bottom: -8px; left: 0; right: 0;
-  height: 9px;
-  background: var(--parchment-dark);
-  clip-path: polygon(0% 0%, 4% 100%, 8% 0%, 12% 100%, 16% 0%, 20% 100%, 24% 0%, 28% 100%, 32% 0%, 36% 100%, 40% 0%, 44% 100%, 48% 0%, 52% 100%, 56% 0%, 60% 100%, 64% 0%, 68% 100%, 72% 0%, 76% 100%, 80% 0%, 84% 100%, 88% 0%, 92% 100%, 96% 0%, 100% 100%);
-}
-.phil-note p {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 0.98rem;
-  color: var(--ink-mid);
-  line-height: 1.7;
-}
-.phil-note-gold {
+.phil-note::before,
+.phil-note::after { content: none; }
+.phil-note-img {
+  width: 100%;
+  height: auto;
   display: block;
-  width: 28px; height: 1px;
-  background: var(--gold);
-  margin: 10px 0 9px;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(2px 3px 8px rgba(44,36,22,0.18));
 }
 
 /* Pillars */
@@ -370,10 +363,24 @@ body::before {
 }
 .pillar {
   text-align: center;
-  padding: 8px 24px 0;
+  padding: 0 24px 8px;
 }
 .pillar + .pillar { border-left: 1px solid rgba(200,169,110,0.25); }
-.pillar-icon { width: 64px; height: 64px; margin: 0 auto 18px; opacity: 0.75; }
+.pillar-img-wrap {
+  width: calc(100% + 48px);
+  margin: 0 -24px 20px;
+  height: 180px;
+  overflow: hidden;
+  background: var(--parchment-mid);
+}
+.pillar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+  padding: 16px 24px;
+}
 .pillar-title {
   font-family: var(--font-display);
   font-size: 1rem;
@@ -897,18 +904,20 @@ body::before {
   .nav-links.open { display: flex; }
   .nav-toggle { display: flex; }
 
-  .hero { grid-template-columns: 1fr; min-height: auto; padding-top: var(--nav-h); }
-  .hero-content { padding: 48px 24px 32px; }
-  .hero-visual { min-height: 320px; padding: 0; }
-  .hero-visual svg { min-height: 320px; }
+  .hero { flex-direction: column; min-height: auto; padding-top: var(--nav-h); align-items: stretch; }
+  .hero::before { background: linear-gradient(to bottom, rgba(245,240,228,0) 30%, var(--parchment) 80%); }
+  .hero-content { padding: 48px 24px 32px; max-width: none; order: 2; }
+  .hero-visual { position: relative; top: auto; right: auto; bottom: auto; width: 100%; height: 340px; min-height: 280px; order: 1; }
+  .hero-visual svg { min-height: 280px; }
   .hero-ctas { flex-direction: column; align-items: flex-start; }
   .hero::after { display: none; }
   .app-card-visual { height: 220px; }
 
   .philosophy-grid { grid-template-columns: 1fr; gap: 36px; }
   .pillars { grid-template-columns: 1fr; gap: 0; }
-  .pillar { padding: 24px 16px; }
+  .pillar { padding: 0 16px 8px; }
   .pillar + .pillar { border-left: none; border-top: 1px solid rgba(200,169,110,0.25); }
+  .pillar-img-wrap { width: calc(100% + 32px); margin: 0 -16px 20px; }
 
   .apps-grid { grid-template-columns: repeat(2, 1fr); }
 
