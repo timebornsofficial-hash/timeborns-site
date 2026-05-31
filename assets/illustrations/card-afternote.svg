@@ -1,0 +1,170 @@
+<svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="an-room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1c1208"/>
+      <stop offset="45%"  stop-color="#221608"/>
+      <stop offset="100%" stop-color="#2c1c0a"/>
+    </linearGradient>
+    <radialGradient id="an-winlight" cx="50%" cy="42%" r="38%">
+      <stop offset="0%"   stop-color="#f8f0d0" stop-opacity="0.96"/>
+      <stop offset="35%"  stop-color="#f0e090" stop-opacity="0.72"/>
+      <stop offset="70%"  stop-color="#e8c850" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#d0a820" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="an-winflare" cx="50%" cy="30%" r="55%">
+      <stop offset="0%"   stop-color="#fffae8" stop-opacity="0.88"/>
+      <stop offset="40%"  stop-color="#f8e890" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f0d040" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="an-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5a3818"/>
+      <stop offset="45%"  stop-color="#4a2c10"/>
+      <stop offset="100%" stop-color="#3a2008"/>
+    </linearGradient>
+    <linearGradient id="an-page-l" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f8f4e4"/>
+      <stop offset="100%" stop-color="#f0ecd8"/>
+    </linearGradient>
+    <linearGradient id="an-page-r" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ede8d4"/>
+      <stop offset="100%" stop-color="#e4dfc8"/>
+    </linearGradient>
+    <radialGradient id="an-vign" cx="50%" cy="50%" r="72%">
+      <stop offset="42%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#0c0804" stop-opacity="0.78"/>
+    </radialGradient>
+    <filter id="an-soft"><feGaussianBlur stdDeviation="2.5"/></filter>
+    <filter id="an-glow"><feGaussianBlur stdDeviation="8" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+    <filter id="an-winblur"><feGaussianBlur stdDeviation="5"/></filter>
+    <clipPath id="an-clip"><rect width="320" height="380"/></clipPath>
+  </defs>
+  <g clip-path="url(#an-clip)">
+
+  <!-- Room background -->
+  <rect width="320" height="380" fill="url(#an-room)"/>
+
+  <!-- Window outer glow (ambient light fill) -->
+  <ellipse cx="160" cy="148" rx="140" ry="130" fill="url(#an-winflare)" filter="url(#an-winblur)"/>
+
+  <!-- Light shafts from window -->
+  <path d="M105 80 L80 290 L120 290 L140 80 Z" fill="#f8e880" fill-opacity="0.04" filter="url(#an-soft)"/>
+  <path d="M160 80 L148 290 L172 290 L178 80 Z" fill="#f8e880" fill-opacity="0.04" filter="url(#an-soft)"/>
+  <path d="M215 80 L200 290 L240 290 L242 80 Z" fill="#f8e880" fill-opacity="0.03" filter="url(#an-soft)"/>
+
+  <!-- Window frame (arched) -->
+  <path d="M108 58 Q108 30 160 28 Q212 30 212 58 L212 190 L108 190 Z"
+        fill="#0e0a04" stroke="#4a3010" stroke-width="3"/>
+  <!-- Window arch glow -->
+  <path d="M112 60 Q112 36 160 34 Q208 36 208 60 L208 186 L112 186 Z"
+        fill="url(#an-winlight)" filter="url(#an-soft)"/>
+  <!-- Window glass pane lines -->
+  <line x1="160" y1="34" x2="160" y2="186" stroke="#6a5020" stroke-width="2.5" opacity="0.45"/>
+  <line x1="112" y1="112" x2="208" y2="112" stroke="#6a5020" stroke-width="2.5" opacity="0.45"/>
+  <!-- Glazing bars -->
+  <line x1="136" y1="34" x2="136" y2="186" stroke="#6a5020" stroke-width="1.2" opacity="0.2"/>
+  <line x1="184" y1="34" x2="184" y2="186" stroke="#6a5020" stroke-width="1.2" opacity="0.2"/>
+  <line x1="112" y1="80" x2="208" y2="80" stroke="#6a5020" stroke-width="1.2" opacity="0.2"/>
+  <line x1="112" y1="148" x2="208" y2="148" stroke="#6a5020" stroke-width="1.2" opacity="0.2"/>
+
+  <!-- Window light core (bright center) -->
+  <path d="M116 60 Q116 38 160 36 Q204 38 204 60 L204 110 L116 110 Z"
+        fill="#fffce8" fill-opacity="0.85" filter="url(#an-soft)"/>
+
+  <!-- Desk surface -->
+  <path d="M0 222 Q80 218 160 220 Q240 218 320 222 L320 380 L0 380 Z"
+        fill="url(#an-desk)"/>
+  <!-- Desk edge highlight -->
+  <path d="M0 222 Q160 218 320 222" stroke="#7a5228" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <!-- Wood grain lines on desk -->
+  <path d="M0 248 Q80 244 160 248 Q240 252 320 248" stroke="#3a2008" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M0 275 Q80 270 160 275 Q240 280 320 275" stroke="#3a2008" stroke-width="0.7" fill="none" opacity="0.2"/>
+  <path d="M0 305 Q80 300 160 305 Q240 310 320 305" stroke="#3a2008" stroke-width="0.6" fill="none" opacity="0.15"/>
+
+  <!-- Book stack (right corner) -->
+  <rect x="252" y="205" width="58" height="14" rx="1" fill="#3c2810" fill-opacity="0.9"/>
+  <rect x="256" y="195" width="50" height="12" rx="1" fill="#4a3018" fill-opacity="0.9"/>
+  <rect x="260" y="185" width="44" height="12" rx="1" fill="#2e1c08" fill-opacity="0.9"/>
+
+  <!-- Open journal (center-right) -->
+  <!-- Journal left page -->
+  <path d="M102 198 Q130 192 158 198 L158 286 Q130 292 102 286 Z"
+        fill="url(#an-page-l)" fill-opacity="0.96"/>
+  <!-- Journal right page -->
+  <path d="M158 198 Q186 192 214 198 L214 286 Q186 292 158 286 Z"
+        fill="url(#an-page-r)" fill-opacity="0.94"/>
+  <!-- Spine shadow -->
+  <path d="M156 196 L160 196 L160 288 L156 288 Z" fill="#8a6840" fill-opacity="0.35"/>
+  <!-- Journal light glow (window reflection on pages) -->
+  <ellipse cx="130" cy="230" rx="30" ry="25" fill="#f8f0d0" fill-opacity="0.15" filter="url(#an-soft)"/>
+
+  <!-- Handwriting lines — left page -->
+  <line x1="112" y1="216" x2="152" y2="213" stroke="#8a7050" stroke-width="0.9" opacity="0.55"/>
+  <line x1="112" y1="224" x2="150" y2="221" stroke="#8a7050" stroke-width="0.9" opacity="0.48"/>
+  <line x1="112" y1="232" x2="153" y2="229" stroke="#8a7050" stroke-width="0.8" opacity="0.5"/>
+  <line x1="112" y1="240" x2="148" y2="237" stroke="#8a7050" stroke-width="0.8" opacity="0.44"/>
+  <line x1="112" y1="248" x2="151" y2="245" stroke="#8a7050" stroke-width="0.8" opacity="0.46"/>
+  <line x1="112" y1="256" x2="146" y2="253" stroke="#8a7050" stroke-width="0.7" opacity="0.4"/>
+  <line x1="112" y1="264" x2="150" y2="261" stroke="#8a7050" stroke-width="0.7" opacity="0.38"/>
+  <line x1="112" y1="272" x2="144" y2="269" stroke="#8a7050" stroke-width="0.6" opacity="0.35"/>
+
+  <!-- Handwriting lines — right page -->
+  <line x1="164" y1="214" x2="208" y2="212" stroke="#8a7050" stroke-width="0.8" opacity="0.42"/>
+  <line x1="164" y1="222" x2="206" y2="220" stroke="#8a7050" stroke-width="0.8" opacity="0.38"/>
+  <line x1="164" y1="230" x2="208" y2="228" stroke="#8a7050" stroke-width="0.7" opacity="0.4"/>
+  <line x1="164" y1="238" x2="204" y2="236" stroke="#8a7050" stroke-width="0.7" opacity="0.35"/>
+  <line x1="164" y1="246" x2="207" y2="244" stroke="#8a7050" stroke-width="0.6" opacity="0.38"/>
+  <!-- Pressed botanical leaf on right page -->
+  <path d="M174 258 Q186 248 198 258 Q186 268 174 258 Z" fill="#6a8850" fill-opacity="0.38"/>
+  <line x1="186" y1="248" x2="186" y2="268" stroke="#5a7840" stroke-width="0.9" fill="none" opacity="0.4"/>
+  <!-- Pen -->
+  <line x1="198" y1="268" x2="213" y2="282" stroke="#4a3018" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <ellipse cx="196" cy="267" rx="2" ry="2" fill="#7a5838" fill-opacity="0.75"/>
+
+  <!-- Coffee mug (left of journal) -->
+  <g transform="translate(44,228)">
+    <path d="M8 18 Q6 20 6 46 Q6 53 13 54 L38 54 Q44 52 44 46 L44 18 Z"
+          fill="#8a6248" fill-opacity="0.88"/>
+    <ellipse cx="25" cy="18" rx="19" ry="5" fill="#9a7258" fill-opacity="0.82"/>
+    <ellipse cx="25" cy="18" rx="16" ry="3.5" fill="#2a1408" fill-opacity="0.7"/>
+    <!-- Mug texture spots -->
+    <circle cx="18" cy="30" r="1.5" fill="#6a4838" fill-opacity="0.35"/>
+    <circle cx="30" cy="25" r="1.2" fill="#6a4838" fill-opacity="0.3"/>
+    <circle cx="22" cy="40" r="1.4" fill="#6a4838" fill-opacity="0.32"/>
+    <circle cx="35" cy="36" r="1" fill="#6a4838" fill-opacity="0.28"/>
+    <!-- Handle -->
+    <path d="M43 24 Q58 24 58 36 Q58 48 43 48"
+          stroke="#7a5238" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+    <!-- Steam wisps -->
+    <path d="M16 14 Q13 6 16 0"  stroke="#e8e0c8" stroke-width="1.3" fill="none" opacity="0.38" stroke-linecap="round"/>
+    <path d="M25 12 Q22 4 25 -2" stroke="#e8e0c8" stroke-width="1.3" fill="none" opacity="0.33" stroke-linecap="round"/>
+    <path d="M34 14 Q31 6 34 0"  stroke="#e8e0c8" stroke-width="1.3" fill="none" opacity="0.3"  stroke-linecap="round"/>
+  </g>
+
+  <!-- Botanical vase (right of window, on desk) -->
+  <g transform="translate(222,188)">
+    <!-- Vase body -->
+    <path d="M14 40 Q8 38 8 52 Q8 64 14 66 L26 66 Q32 64 32 52 Q32 38 26 40 Z"
+          fill="#7a6048" fill-opacity="0.82"/>
+    <ellipse cx="20" cy="40" rx="9" ry="3.5" fill="#8a7058" fill-opacity="0.75"/>
+    <!-- Water in vase (slightly transparent) -->
+    <rect x="10" y="46" width="20" height="16" rx="1" fill="#384030" fill-opacity="0.3"/>
+    <!-- Stems -->
+    <line x1="20" y1="40" x2="15" y2="10" stroke="#6a8840" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+    <line x1="20" y1="40" x2="22" y2="5"  stroke="#6a8840" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+    <line x1="20" y1="40" x2="28" y2="12" stroke="#6a8840" stroke-width="1.2" stroke-linecap="round" opacity="0.65"/>
+    <!-- Leaves -->
+    <ellipse cx="12" cy="20" rx="9" ry="5" fill="#5a7838" fill-opacity="0.72" transform="rotate(-40,12,20)"/>
+    <ellipse cx="20" cy="10" rx="7" ry="4" fill="#6a8840" fill-opacity="0.68" transform="rotate(5,20,10)"/>
+    <ellipse cx="28" cy="16" rx="8" ry="4.5" fill="#5a7838" fill-opacity="0.7" transform="rotate(35,28,16)"/>
+    <ellipse cx="8"  cy="30" rx="6" ry="3.5" fill="#4a6828" fill-opacity="0.6" transform="rotate(-55,8,30)"/>
+  </g>
+
+  <!-- Ambient light on wall above desk -->
+  <ellipse cx="160" cy="200" rx="120" ry="50" fill="#f8e870" fill-opacity="0.04" filter="url(#an-soft)"/>
+
+  <!-- Vignette -->
+  <rect width="320" height="380" fill="url(#an-vign)"/>
+
+  </g>
+</svg>

@@ -1,0 +1,181 @@
+<svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="fm-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#06061a"/>
+      <stop offset="28%"  stop-color="#0e0e30"/>
+      <stop offset="56%"  stop-color="#181848"/>
+      <stop offset="78%"  stop-color="#201858"/>
+      <stop offset="100%" stop-color="#281a60"/>
+    </linearGradient>
+    <radialGradient id="fm-moon-glow" cx="72%" cy="18%" r="28%">
+      <stop offset="0%"   stop-color="#f8f0a0" stop-opacity="0.9"/>
+      <stop offset="25%"  stop-color="#f0d870" stop-opacity="0.5"/>
+      <stop offset="60%"  stop-color="#c8a820" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#b09010" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fm-aurora" cx="30%" cy="35%" r="60%">
+      <stop offset="0%"   stop-color="#1a3060" stop-opacity="0.35"/>
+      <stop offset="50%"  stop-color="#101e48" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#08102e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fm-hills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0e0e2e"/>
+      <stop offset="100%" stop-color="#060618"/>
+    </linearGradient>
+    <linearGradient id="fm-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a0a28"/>
+      <stop offset="100%" stop-color="#060614"/>
+    </linearGradient>
+    <linearGradient id="fm-box-body" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3a4c68"/>
+      <stop offset="50%"  stop-color="#4a5c78"/>
+      <stop offset="100%" stop-color="#384870"/>
+    </linearGradient>
+    <linearGradient id="fm-box-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#506080"/>
+      <stop offset="100%" stop-color="#3e5070"/>
+    </linearGradient>
+    <radialGradient id="fm-vign" cx="50%" cy="50%" r="70%">
+      <stop offset="45%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#020408" stop-opacity="0.8"/>
+    </radialGradient>
+    <filter id="fm-starglow">
+      <feGaussianBlur stdDeviation="1" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="fm-moonglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="fm-soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <clipPath id="fm-clip"><rect width="320" height="380"/></clipPath>
+  </defs>
+  <g clip-path="url(#fm-clip)">
+
+  <!-- Sky -->
+  <rect width="320" height="380" fill="url(#fm-sky)"/>
+
+  <!-- Aurora/nebula glow -->
+  <ellipse cx="96" cy="133" rx="192" ry="138" fill="url(#fm-aurora)"/>
+
+  <!-- Stars — tiny -->
+  <circle cx="10"  cy="14"  r="0.7" fill="#c0d0f0" opacity="0.75"/>
+  <circle cx="26"  cy="6"   r="0.8" fill="#d8e8ff" opacity="0.82"/>
+  <circle cx="44"  cy="20"  r="0.6" fill="#c0c8f0" opacity="0.68"/>
+  <circle cx="60"  cy="10"  r="0.9" fill="#e0eaff" opacity="0.86"/>
+  <circle cx="78"  cy="28"  r="0.7" fill="#c8d0f0" opacity="0.72"/>
+  <circle cx="96"  cy="8"   r="0.6" fill="#c0d0f0" opacity="0.64"/>
+  <circle cx="112" cy="22"  r="0.8" fill="#d8e4ff" opacity="0.78"/>
+  <circle cx="130" cy="8"   r="0.7" fill="#c0d0f0" opacity="0.68"/>
+  <circle cx="148" cy="26"  r="0.9" fill="#e0eaff" opacity="0.84"/>
+  <circle cx="166" cy="12"  r="0.6" fill="#c0d0f0" opacity="0.7"/>
+  <circle cx="182" cy="30"  r="0.8" fill="#d0daf8" opacity="0.75"/>
+  <circle cx="210" cy="16"  r="0.7" fill="#c0d0f0" opacity="0.7"/>
+  <circle cx="230" cy="6"   r="0.6" fill="#c0c8f0" opacity="0.65"/>
+  <circle cx="248" cy="24"  r="0.9" fill="#e0eaff" opacity="0.8"/>
+  <circle cx="270" cy="12"  r="0.7" fill="#c8d0f0" opacity="0.72"/>
+  <circle cx="290" cy="28"  r="0.8" fill="#d8e8ff" opacity="0.76"/>
+  <circle cx="308" cy="14"  r="0.6" fill="#c0d0f0" opacity="0.65"/>
+  <circle cx="22"  cy="44"  r="0.7" fill="#c0d0f0" opacity="0.68"/>
+  <circle cx="40"  cy="56"  r="0.8" fill="#d8e4ff" opacity="0.74"/>
+  <circle cx="58"  cy="42"  r="0.6" fill="#c0d0f0" opacity="0.62"/>
+  <circle cx="76"  cy="62"  r="0.9" fill="#e0eaff" opacity="0.82"/>
+  <circle cx="92"  cy="48"  r="0.7" fill="#c8d0f0" opacity="0.7"/>
+  <circle cx="110" cy="60"  r="0.6" fill="#c0d0f0" opacity="0.62"/>
+  <circle cx="128" cy="44"  r="0.8" fill="#d8e4ff" opacity="0.76"/>
+  <circle cx="145" cy="66"  r="0.7" fill="#c0d0f0" opacity="0.65"/>
+  <circle cx="162" cy="52"  r="0.9" fill="#e0eaff" opacity="0.84"/>
+  <circle cx="180" cy="66"  r="0.6" fill="#c0d0f0" opacity="0.62"/>
+  <circle cx="200" cy="50"  r="0.8" fill="#d0daf8" opacity="0.74"/>
+  <circle cx="218" cy="68"  r="0.7" fill="#c0d0f0" opacity="0.72"/>
+  <circle cx="238" cy="54"  r="0.6" fill="#c0d0f0" opacity="0.64"/>
+  <circle cx="255" cy="68"  r="0.9" fill="#e0eaff" opacity="0.8"/>
+  <circle cx="274" cy="52"  r="0.7" fill="#c8d0f0" opacity="0.7"/>
+  <circle cx="295" cy="66"  r="0.8" fill="#d8e8ff" opacity="0.76"/>
+  <circle cx="314" cy="46"  r="0.6" fill="#c0d0f0" opacity="0.62"/>
+
+  <!-- Medium stars -->
+  <circle cx="36"  cy="34"  r="1.2" fill="#e8f0ff" opacity="0.88" filter="url(#fm-starglow)"/>
+  <circle cx="90"  cy="16"  r="1.1" fill="#f0f4ff" opacity="0.9"  filter="url(#fm-starglow)"/>
+  <circle cx="152" cy="40"  r="1.3" fill="#e0ecff" opacity="0.86" filter="url(#fm-starglow)"/>
+  <circle cx="216" cy="22"  r="1.2" fill="#e8f0ff" opacity="0.9"  filter="url(#fm-starglow)"/>
+  <circle cx="282" cy="42"  r="1.1" fill="#f0f4ff" opacity="0.88" filter="url(#fm-starglow)"/>
+  <circle cx="58"  cy="78"  r="1.3" fill="#e8f0ff" opacity="0.86" filter="url(#fm-starglow)"/>
+  <circle cx="172" cy="84"  r="1.2" fill="#f0f4ff" opacity="0.9"  filter="url(#fm-starglow)"/>
+
+  <!-- Moon corona -->
+  <ellipse cx="230" cy="68" rx="52" ry="52" fill="url(#fm-moon-glow)" filter="url(#fm-moonglow)"/>
+
+  <!-- Moon crescent -->
+  <!-- Full circle then mask -->
+  <circle cx="230" cy="68" r="26" fill="#f8f0a0" fill-opacity="0.96"/>
+  <circle cx="244" cy="62" r="22" fill="url(#fm-sky)"/>
+  <!-- Moon rim highlight -->
+  <path d="M214 56 Q208 68 214 80 Q220 88 230 90 Q220 80 218 68 Q218 56 226 48 Q220 50 214 56 Z"
+        fill="#f8f0a0" fill-opacity="0.3"/>
+
+  <!-- Distant hills silhouette -->
+  <path d="M0 270 Q40 254 80 264 Q120 248 162 260 Q202 246 244 258 Q280 246 320 258
+           L320 290 L0 290 Z"
+        fill="url(#fm-hills)" fill-opacity="0.92"/>
+
+  <!-- Near hills -->
+  <path d="M0 282 Q35 265 70 276 Q108 260 148 272 Q188 258 228 270 Q270 256 310 268 L320 272 L320 300 L0 300 Z"
+        fill="#090920" fill-opacity="0.96"/>
+
+  <!-- Ground -->
+  <rect x="0" y="296" width="320" height="84" fill="url(#fm-ground)"/>
+
+  <!-- Ground horizon line -->
+  <path d="M0 296 Q160 292 320 296" stroke="#1a1a40" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Path to mailbox -->
+  <path d="M160 380 Q162 360 160 340 Q158 325 160 308"
+        stroke="#1a1a40" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.45"/>
+  <path d="M160 380 Q162 360 160 340 Q158 325 160 308"
+        stroke="#242448" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+  <!-- Mailbox post -->
+  <rect x="156" y="280" width="8" height="30" rx="2" fill="#304060" fill-opacity="0.92"/>
+
+  <!-- Mailbox body (classic dome-top style) -->
+  <g transform="translate(132,250)">
+    <!-- Body -->
+    <rect x="0" y="14" width="56" height="30" rx="2" fill="url(#fm-box-body)" fill-opacity="0.95"/>
+    <!-- Dome top -->
+    <path d="M0 14 Q28 0 56 14 Z" fill="url(#fm-box-top)"/>
+    <!-- Top highlight -->
+    <path d="M4 14 Q28 3 52 14" stroke="#6880a0" stroke-width="1" fill="none" opacity="0.4"/>
+    <!-- Side rivet details -->
+    <circle cx="4"  cy="20" r="2" fill="#2c3c58" fill-opacity="0.7"/>
+    <circle cx="4"  cy="38" r="2" fill="#2c3c58" fill-opacity="0.7"/>
+    <circle cx="52" cy="20" r="2" fill="#2c3c58" fill-opacity="0.7"/>
+    <circle cx="52" cy="38" r="2" fill="#2c3c58" fill-opacity="0.7"/>
+    <!-- Mailbox flag -->
+    <line x1="56" y1="14" x2="56" y2="22" stroke="#8a5040" stroke-width="2" opacity="0.8"/>
+    <rect x="56" y="14" width="10" height="6" rx="1" fill="#c06040" fill-opacity="0.8"/>
+    <!-- Open lid (door open at bottom) -->
+    <path d="M0 44 Q28 50 56 44 L52 44 Q26 48 4 44 Z" fill="#2c3c58" fill-opacity="0.6"/>
+    <!-- Envelope peeking out -->
+    <path d="M8 42 Q28 36 48 42 L46 52 Q28 44 10 52 Z" fill="#f5f0d8" fill-opacity="0.92"/>
+    <path d="M8 42 Q28 48 48 42" stroke="#d8c890" stroke-width="0.8" fill="none" opacity="0.5"/>
+    <!-- "Dear Me" faint script -->
+    <text x="14" y="49" fill="#8a7840" opacity="0.5" font-size="4.5" font-family="Georgia,serif" font-style="italic">Dear Me...</text>
+  </g>
+
+  <!-- Fireflies (glowing dots near ground) -->
+  <circle cx="88"  cy="312" r="2"   fill="#a0e870" fill-opacity="0.72" filter="url(#fm-starglow)"/>
+  <circle cx="95"  cy="320" r="1.4" fill="#a0e870" fill-opacity="0.6"  filter="url(#fm-starglow)"/>
+  <circle cx="240" cy="316" r="2.2" fill="#a0e870" fill-opacity="0.68" filter="url(#fm-starglow)"/>
+  <circle cx="250" cy="308" r="1.5" fill="#b8e870" fill-opacity="0.58" filter="url(#fm-starglow)"/>
+  <circle cx="72"  cy="295" r="1.8" fill="#a0e870" fill-opacity="0.62" filter="url(#fm-starglow)"/>
+  <circle cx="262" cy="298" r="1.6" fill="#a0e870" fill-opacity="0.6"  filter="url(#fm-starglow)"/>
+
+  <!-- Moon reflection in ground -->
+  <ellipse cx="230" cy="306" rx="20" ry="4" fill="#f0e070" fill-opacity="0.1" filter="url(#fm-soft)"/>
+
+  <!-- Vignette -->
+  <rect width="320" height="380" fill="url(#fm-vign)"/>
+
+  </g>
+</svg>

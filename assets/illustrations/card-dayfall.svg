@@ -1,0 +1,148 @@
+<svg viewBox="0 0 320 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="df-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f5e8c0"/>
+      <stop offset="22%" stop-color="#f2cc70"/>
+      <stop offset="48%" stop-color="#e88535"/>
+      <stop offset="68%" stop-color="#c85a18"/>
+      <stop offset="85%" stop-color="#9e3a0a"/>
+      <stop offset="100%" stop-color="#6a2006"/>
+    </linearGradient>
+    <radialGradient id="df-sunhalo" cx="50%" cy="65%" r="48%">
+      <stop offset="0%"  stop-color="#fffce0" stop-opacity="0.92"/>
+      <stop offset="18%" stop-color="#f8e060" stop-opacity="0.7"/>
+      <stop offset="45%" stop-color="#e88030" stop-opacity="0.28"/>
+      <stop offset="80%" stop-color="#d06020" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#c05010" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="df-water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#b85c18"/>
+      <stop offset="35%" stop-color="#8a3c0c"/>
+      <stop offset="70%" stop-color="#622808"/>
+      <stop offset="100%" stop-color="#3e1404"/>
+    </linearGradient>
+    <radialGradient id="df-reflect" cx="50%" cy="0%" r="55%">
+      <stop offset="0%"  stop-color="#f8e050" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#e88030" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e88030" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="df-vign" cx="50%" cy="45%" r="72%">
+      <stop offset="52%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#1a0802" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="df-mist"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="df-soft"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="df-glow"><feGaussianBlur stdDeviation="12" result="b"/><feComposite in="SourceGraphic" in2="b" operator="over"/></filter>
+    <filter id="df-paint">
+      <feTurbulence type="fractalNoise" baseFrequency="0.042 0.03" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <clipPath id="df-clip"><rect width="320" height="380"/></clipPath>
+  </defs>
+  <g clip-path="url(#df-clip)">
+
+  <!-- Sky -->
+  <rect width="320" height="380" fill="url(#df-sky)"/>
+
+  <!-- Cloud haze — upper sky -->
+  <ellipse cx="72"  cy="44"  rx="112" ry="38" fill="#f8e8a0" fill-opacity="0.2"  filter="url(#df-mist)"/>
+  <ellipse cx="268" cy="30"  rx="88"  ry="30" fill="#f8e8a0" fill-opacity="0.16" filter="url(#df-mist)"/>
+  <ellipse cx="168" cy="72"  rx="145" ry="34" fill="#f0d880" fill-opacity="0.13" filter="url(#df-mist)"/>
+  <ellipse cx="35"  cy="108" rx="70"  ry="22" fill="#f8e8a0" fill-opacity="0.1"  filter="url(#df-mist)"/>
+  <ellipse cx="295" cy="90"  rx="56"  ry="19" fill="#f8e8a0" fill-opacity="0.1"  filter="url(#df-mist)"/>
+
+  <!-- Sun corona bloom -->
+  <ellipse cx="160" cy="248" rx="82" ry="82" fill="url(#df-sunhalo)" filter="url(#df-glow)"/>
+
+  <!-- Far mountains (misty) -->
+  <path d="M0 212 Q30 194 65 208 Q105 184 145 200 Q182 180 220 196 Q255 178 290 194 L320 198 L320 256 L0 256 Z"
+        fill="#c06830" fill-opacity="0.38" filter="url(#df-mist)"/>
+
+  <!-- Mid mountains -->
+  <path d="M0 226 Q26 208 58 220 Q96 198 132 214 Q168 194 205 210 Q240 192 275 208 L320 212 L320 264 L0 264 Z"
+        fill="#9a4018" fill-opacity="0.58" filter="url(#df-paint)"/>
+
+  <!-- Near cliffs -->
+  <path d="M0 238 Q30 220 62 233 Q95 215 128 228 Q155 213 180 224 Q208 213 234 224 Q262 212 292 224 L320 232 L320 270 L0 270 Z"
+        fill="#7a2e0c" fill-opacity="0.76" filter="url(#df-paint)"/>
+
+  <!-- Sun disc -->
+  <ellipse cx="160" cy="248" rx="80" ry="80" fill="#e88030" fill-opacity="0.08" filter="url(#df-mist)"/>
+  <ellipse cx="160" cy="248" rx="34"  ry="34"  fill="#fff8c0" fill-opacity="0.95"/>
+  <ellipse cx="160" cy="248" rx="24"  ry="24"  fill="#fffce8"/>
+  <ellipse cx="160" cy="248" rx="16"  ry="16"  fill="#fffff4"/>
+
+  <!-- Water -->
+  <rect x="0" y="266" width="320" height="114" fill="url(#df-water)"/>
+
+  <!-- Sun reflection -->
+  <ellipse cx="160" cy="278" rx="11" ry="60" fill="url(#df-reflect)" filter="url(#df-soft)"/>
+
+  <!-- Ripple lines -->
+  <path d="M90 280 Q118 277 146 280"  stroke="#f8d058" stroke-width="1"   fill="none" opacity="0.34"/>
+  <path d="M174 280 Q204 277 232 280" stroke="#f8d058" stroke-width="1"   fill="none" opacity="0.34"/>
+  <path d="M74 292 Q114 289 148 292"  stroke="#e09030" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M172 292 Q212 289 250 292" stroke="#e09030" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <path d="M56 306 Q108 304 148 306"  stroke="#c07020" stroke-width="0.7" fill="none" opacity="0.2"/>
+  <path d="M172 306 Q224 304 272 306" stroke="#c07020" stroke-width="0.7" fill="none" opacity="0.2"/>
+  <path d="M40 322 Q105 320 148 322"  stroke="#a05818" stroke-width="0.6" fill="none" opacity="0.15"/>
+  <path d="M172 322 Q234 320 290 322" stroke="#a05818" stroke-width="0.6" fill="none" opacity="0.15"/>
+
+  <!-- Rocky shore -->
+  <path d="M0 300 Q22 284 48 296 Q72 278 100 290 Q125 274 152 286 Q175 272 200 283 Q228 270 258 282 Q285 270 314 280 L320 284 L320 380 L0 380 Z"
+        fill="#3c1808" fill-opacity="0.97" filter="url(#df-paint)"/>
+
+  <!-- Rock texture lines -->
+  <path d="M0 310 Q36 298 70 308 Q104 296 135 306 Q165 295 195 305" stroke="#5a2810" stroke-width="1.8" fill="none" opacity="0.42"/>
+  <path d="M195 305 Q228 294 260 304 Q288 294 316 302" stroke="#5a2810" stroke-width="1.8" fill="none" opacity="0.42"/>
+
+  <!-- Rocks -->
+  <ellipse cx="44"  cy="318" rx="36" ry="12" fill="#4a2010" fill-opacity="0.62"/>
+  <ellipse cx="195" cy="310" rx="30" ry="10" fill="#4a2010" fill-opacity="0.56"/>
+  <ellipse cx="298" cy="322" rx="24" ry="8"  fill="#4a2010" fill-opacity="0.52"/>
+
+  <!-- Foreground mass -->
+  <path d="M0 350 Q50 336 95 348 Q140 330 185 344 Q228 328 270 342 L320 338 L320 380 L0 380 Z"
+        fill="#2a0e04" fill-opacity="0.92"/>
+
+  <!-- Sitting figure -->
+  <g transform="translate(244,293)">
+    <ellipse cx="14" cy="26" rx="23" ry="9" fill="#1a0804" fill-opacity="0.96"/>
+    <path d="M7 20 Q10 9 15 6 Q21 4 24 9 Q26 14 22 19 Q18 23 9 24 Z" fill="#100402" fill-opacity="0.96"/>
+    <circle cx="16" cy="5" r="5.5" fill="#100402" fill-opacity="0.96"/>
+    <path d="M7 20 Q2 24 0 28" stroke="#100402" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.92"/>
+    <path d="M11 22 Q8 27 6 31" stroke="#100402" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.92"/>
+  </g>
+
+  <!-- Orbit / time-cycle motif (Dayfall UI element, left side) -->
+  <g transform="translate(20,240)" opacity="0.52">
+    <circle cx="18" cy="18" r="23" fill="none" stroke="#f8e060" stroke-width="0.7" stroke-dasharray="2.5,2.5" opacity="0.45"/>
+    <circle cx="18" cy="18" r="15" fill="none" stroke="#f8e060" stroke-width="0.5" opacity="0.32"/>
+    <circle cx="18" cy="-5"  r="3"   fill="#f8e060" fill-opacity="0.92"/>
+    <circle cx="39" cy="18"  r="2.2" fill="#f8e060" fill-opacity="0.78"/>
+    <circle cx="18" cy="41"  r="2.6" fill="#f8e060" fill-opacity="0.72"/>
+    <circle cx="-3" cy="18"  r="2.2" fill="#f8e060" fill-opacity="0.78"/>
+    <circle cx="34" cy="2"   r="1.8" fill="#f8e060" fill-opacity="0.6"/>
+    <circle cx="34" cy="34"  r="1.8" fill="#f8e060" fill-opacity="0.55"/>
+    <circle cx="2"  cy="34"  r="1.8" fill="#f8e060" fill-opacity="0.55"/>
+    <circle cx="2"  cy="2"   r="1.8" fill="#f8e060" fill-opacity="0.6"/>
+    <circle cx="18" cy="18"  r="3.8" fill="#fffce0" fill-opacity="0.95"/>
+    <!-- Timeline dots below -->
+    <line x1="18" y1="41" x2="18" y2="57" stroke="#f8e060" stroke-width="0.5" opacity="0.3"/>
+    <circle cx="18" cy="60" r="2"   fill="#f8e060" fill-opacity="0.62"/>
+    <circle cx="18" cy="70" r="1.6" fill="#f8e060" fill-opacity="0.52"/>
+    <circle cx="18" cy="79" r="1.3" fill="#f8e060" fill-opacity="0.42"/>
+  </g>
+
+  <!-- Birds -->
+  <path d="M52 84 Q56 80 60 84 Q64 80 68 84"  stroke="#7a3c12" stroke-width="1.4" fill="none" opacity="0.52"/>
+  <path d="M76 66 Q80 62 84 66 Q88 62 92 66"  stroke="#7a3c12" stroke-width="1.2" fill="none" opacity="0.44"/>
+  <path d="M34 102 Q38 98 42 102 Q46 98 50 102" stroke="#7a3c12" stroke-width="1.3" fill="none" opacity="0.46"/>
+  <path d="M105 52 Q108 49 111 52 Q114 49 117 52" stroke="#7a3c12" stroke-width="1.1" fill="none" opacity="0.36"/>
+  <path d="M218 74 Q221 71 224 74 Q227 71 230 74" stroke="#7a3c12" stroke-width="1"   fill="none" opacity="0.3"/>
+
+  <!-- Vignette -->
+  <rect width="320" height="380" fill="url(#df-vign)"/>
+
+  </g>
+</svg>
