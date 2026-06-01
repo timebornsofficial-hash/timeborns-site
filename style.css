@@ -372,6 +372,17 @@ body::before {
   height: 180px;
   overflow: hidden;
   background: var(--parchment-mid);
+  position: relative;
+}
+.pillar-img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, #ece6d2 0%, rgba(236,230,210,0) 24%, rgba(236,230,210,0) 76%, #ece6d2 100%),
+    linear-gradient(to right, #ece6d2 0%, rgba(236,230,210,0) 12%, rgba(236,230,210,0) 88%, #ece6d2 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 .pillar-img {
   width: 100%;

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dayfall — 지나간 하루를 다시 만나는 회상 캘린더</title>
-  <meta name="description" content="그날 뭐 했지? Dayfall은 사진, 장소, 메모, 일정으로 하루를 다시 떠올리는 로컬형 회상 캘린더입니다." />
+  <title>Dayfall — A Memory Calendar · Timeborns</title>
+  <meta name="description" content="What did I actually do that day? Dayfall is a local-first memory calendar that helps you recall the past through photos, places, notes, and events." />
   <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#f7efe2">
 </head>
 <body>
 
@@ -43,7 +50,7 @@
         </nav>
         <span class="page-hero-eyebrow">App · Recall &amp; Reflect</span>
         <h1 class="page-hero-title" id="dayfallTitle">Dayfall</h1>
-        <p class="page-hero-sub">지나간 하루를 다시 만나는 회상 캘린더.</p>
+        <p class="page-hero-sub">A memory calendar for the days you lived.</p>
       </div>
     </section>
 
@@ -62,33 +69,24 @@
             <h2 class="dayfall-question" id="dfQuestion">"그날 뭐 했지?"</h2>
             <div class="divider-gold"></div>
             <p class="dayfall-intro-body">
-              Dayfall은 일반 일정관리 앱이 아닙니다.
-              오늘 무엇을 할지 계획하는 도구가 아니라,
-              <strong>지나간 하루를 다시 떠올리는</strong> 회상 캘린더입니다.
+              Dayfall is not a traditional schedule planner.
+              It is not about what you are going to do.
+              It is a quiet memory calendar that helps you remember
+              <strong>the days you have already lived.</strong>
             </p>
             <p class="dayfall-intro-body">
-              사진, 장소, 한 줄 메모, 결제 흔적, 일정으로 그날의 기억을 다시 불러옵니다.
-              데이터는 기기 안에만 저장되며, 로그인도 서버도 필요하지 않습니다.
+              With photos, places, short notes, payment traces, and events,
+              Dayfall helps you bring back the shape of a day.
+              Your data stays on your device — no login, no server required.
             </p>
             <p class="dayfall-intro-body">
               "What did I actually do that day?" — Dayfall helps you remember.
             </p>
           </div>
           <div aria-hidden="true" style="display:flex;align-items:center;justify-content:center;">
-            <!-- Dayfall visual card mockup -->
-            <div style="width:220px;height:320px;border-radius:16px;overflow:hidden;box-shadow:0 12px 40px rgba(44,36,22,0.2);">
-              <div style="height:200px;background:radial-gradient(ellipse at 50% 85%,rgba(255,185,80,0.7) 0%,transparent 55%),linear-gradient(170deg,#d4714a 0%,#9a3d1e 35%,#5a1e08 65%,#1c0a04 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;">
-                <span style="color:rgba(255,255,255,0.9);font-family:'Playfair Display',Georgia,serif;font-size:1.25rem;font-weight:600;text-shadow:0 1px 8px rgba(0,0,0,0.5);">Dayfall</span>
-                <div style="display:flex;flex-direction:column;gap:5px;align-items:center;opacity:0.6;">
-                  <span style="display:block;width:5px;height:5px;border-radius:50%;background:rgba(255,220,140,0.9);"></span>
-                  <span style="display:block;width:7px;height:7px;border-radius:50%;background:rgba(255,220,140,0.9);"></span>
-                  <span style="display:block;width:5px;height:5px;border-radius:50%;background:rgba(255,220,140,0.9);"></span>
-                </div>
-              </div>
-              <div style="height:120px;background:#faf8f3;padding:16px;">
-                <p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:0.85rem;color:#5c4a2a;line-height:1.6;">A gentle end-of-day journal to reflect, release, and close with peace.</p>
-              </div>
-            </div>
+            <img src="../assets/images/app-dayfall.png"
+                 alt="Dayfall app preview"
+                 style="max-width:280px;width:100%;display:block;border-radius:16px;box-shadow:0 12px 40px rgba(44,36,22,0.2);object-fit:contain;">
           </div>
         </div>
       </div>
@@ -104,36 +102,36 @@
     <!-- FEATURES -->
     <section class="section" aria-labelledby="featuresTitle" style="background:var(--parchment);">
       <div class="container">
-        <p class="section-label">주요 기능</p>
+        <p class="section-label">Key Features</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:8px;" id="featuresTitle">
-          하루의 기억을 구성하는 단서들
+          The clues that bring a day back to life
         </h2>
         <div class="divider-gold"></div>
 
         <div class="features-grid">
           <div class="feature-card">
-            <h3>📸 대표사진</h3>
-            <p>그날의 분위기를 가장 잘 담은 사진을 대표 이미지로 설정할 수 있습니다. 갤러리에서 선택하거나 카메라로 촬영합니다.</p>
+            <h3>📸 Representative Photo</h3>
+            <p>Set a photo that best captures the atmosphere of the day. Choose from your gallery or take a new one with the camera.</p>
           </div>
           <div class="feature-card">
-            <h3>📍 장소 흐름</h3>
-            <p>하루 동안 방문한 장소들을 시간 순서로 확인할 수 있습니다. 이동선 전체가 아니라 일정 시간 이상 체류한 장소 위주로 기록됩니다.</p>
+            <h3>📍 Place History</h3>
+            <p>Review the places you visited throughout the day in chronological order. Records focus on locations where you stayed for a meaningful amount of time.</p>
           </div>
           <div class="feature-card">
-            <h3>✍️ 한 줄 메모</h3>
-            <p>그날을 한 문장으로 정리합니다. 오늘을 어떤 날로 기억할지 직접 적어두는 공간입니다.</p>
+            <h3>✍️ One-Line Memo</h3>
+            <p>Summarize the day in a single sentence — a space to write how you want to remember this day.</p>
           </div>
           <div class="feature-card">
-            <h3>💳 결제 흔적</h3>
-            <p>그날 어디서 무엇을 했는지 되짚는 보조 단서입니다. 금융 자동연동이 아닌 수동 기록 중심입니다.</p>
+            <h3>💳 Payment Traces</h3>
+            <p>A supporting clue to recall where you were and what you did. Based on manual records — no automatic financial connection.</p>
           </div>
           <div class="feature-card">
-            <h3>📅 일정 / 기념일</h3>
-            <p>생일, 기일, 기념일, 약속 등 날짜별 중요 일정을 기록하고 리마인드를 받을 수 있습니다.</p>
+            <h3>📅 Events &amp; Anniversaries</h3>
+            <p>Record birthdays, anniversaries, appointments, and other important dates — with local reminders.</p>
           </div>
           <div class="feature-card">
-            <h3>🔒 로컬 저장</h3>
-            <p>모든 데이터는 기기 안에만 저장됩니다. 로그인이 없으며, 데이터는 클라우드로 전송되지 않습니다.</p>
+            <h3>🔒 Local Storage</h3>
+            <p>All data stays on your device. No login required. Nothing is sent to the cloud.</p>
           </div>
         </div>
       </div>
@@ -142,31 +140,31 @@
     <!-- PRIVACY PHILOSOPHY -->
     <section class="dayfall-band section" aria-labelledby="privacyPhilosTitle">
       <div class="container">
-        <p class="section-label">프라이버시 철학</p>
+        <p class="section-label">Privacy Philosophy</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:16px;" id="privacyPhilosTitle">
-          당신의 기억은 당신 것입니다
+          Your memories belong to you.
         </h2>
         <div class="divider-gold"></div>
         <p style="font-size:1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:28px;max-width:640px;">
-          Dayfall은 처음부터 "서버 없이, 로그인 없이" 설계되었습니다.
-          당신의 회상 기록은 오직 당신의 기기 안에만 머뭅니다.
+          Dayfall was designed from the start to work without a server and without a login.
+          Your recall records live only inside your own device.
         </p>
 
         <div class="privacy-badges" role="list">
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🚫</span> 로그인 없음
+            <span aria-hidden="true">🚫</span> No login
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🌐</span> 서버 없음
+            <span aria-hidden="true">🌐</span> No server
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">☁️</span> 클라우드 동기화 없음
+            <span aria-hidden="true">☁️</span> No cloud sync
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">📱</span> 데이터는 기기 내 저장
+            <span aria-hidden="true">📱</span> Data on device only
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🔐</span> 사용자가 직접 관리
+            <span aria-hidden="true">🔐</span> You are in control
           </div>
         </div>
       </div>
@@ -175,38 +173,39 @@
     <!-- PERMISSIONS -->
     <section class="section" aria-labelledby="permsTitle" style="background:var(--parchment);">
       <div class="container">
-        <p class="section-label">앱 권한 안내</p>
+        <p class="section-label">App Permissions</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:8px;" id="permsTitle">
-          필요한 권한과 그 이유
+          What we ask for, and why
         </h2>
         <div class="divider-gold"></div>
         <p style="font-size:0.95rem;color:var(--ink-light);margin-bottom:28px;">
-          Dayfall은 앱의 핵심 기능을 위해 최소한의 권한만 요청합니다.
+          Dayfall requests only the minimum permissions needed for its core features.
         </p>
 
         <div class="permission-cards">
           <div class="permission-card">
-            <h3>📸 사진 접근 권한</h3>
+            <h3>📸 Photo Library Access</h3>
             <p>
-              그날의 대표사진을 갤러리에서 선택하거나, 날짜별 사진을 확인하는 데 사용됩니다.
-              사진을 외부로 전송하거나 서버에 업로드하지 않습니다.
-              사진 메타데이터(촬영 일시 등)는 기억 단서 표시에만 사용됩니다.
+              Used to select a representative photo for each day and to display photo metadata
+              (such as capture date and time) as memory cues.
+              Photos are never uploaded or transmitted outside your device.
+              Timeborns never accesses your photos.
             </p>
           </div>
           <div class="permission-card">
-            <h3>📍 위치 권한 (항상 허용 포함 가능)</h3>
+            <h3>📍 Location (including "Always Allow")</h3>
             <p>
-              하루 동안 방문한 장소 흐름을 복원하는 데 사용됩니다.
-              이동 경로 전체를 추적하는 것이 아니라, 일정 시간 이상 체류한 주요 장소만 기록합니다.
-              위치 데이터는 기기 내에만 저장되며 외부로 전송되지 않습니다.
-              백그라운드 위치 권한은 장소 흐름 기능 활성화 시 필요할 수 있습니다.
+              Used to reconstruct which places you visited during the day.
+              Only locations where you stayed for roughly 15 minutes or more are recorded — not your full movement path.
+              Location data stays on your device and is never sent externally.
+              Background location may be needed to capture place history when the app is not open.
             </p>
           </div>
           <div class="permission-card">
-            <h3>🔔 알림 권한</h3>
+            <h3>🔔 Notifications</h3>
             <p>
-              생일, 기일, 기념일, 약속 등 날짜별 일정 리마인드를 위해 사용됩니다.
-              알림은 기기 로컬에서만 발송되며, 외부 서버를 통하지 않습니다.
+              Used to send local reminders for birthdays, anniversaries, and events you have added.
+              All notifications are generated locally on your device — no remote server involved.
             </p>
           </div>
         </div>
@@ -216,29 +215,29 @@
     <!-- LIMITATIONS -->
     <section class="dayfall-band section" aria-labelledby="limitsTitle">
       <div class="container">
-        <p class="section-label">한계 / 주의사항</p>
+        <p class="section-label">Limitations</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:8px;" id="limitsTitle">
-          Dayfall이 하지 않는 것들
+          What Dayfall does not do
         </h2>
         <div class="divider-gold"></div>
         <p style="font-size:0.95rem;color:var(--ink-mid);margin-bottom:20px;line-height:1.85;">
-          Dayfall은 기억 복원을 돕는 도구입니다. 모든 실제 활동을 완벽히 기록하는 시스템은 아닙니다.
+          Dayfall is a tool to help you recall memories — not a system that records everything perfectly.
         </p>
 
         <ul class="caveat-list">
-          <li>위치 정확도는 기기 상태, OS 정책, 배터리 최적화, GPS 환경에 따라 달라질 수 있습니다.</li>
-          <li>장소 기록은 대략 15분 이상 체류한 장소를 기준으로 합니다.</li>
-          <li>이동 경로 전체(이동선)를 저장하지 않습니다.</li>
-          <li>금융기관 자동연동 없음 — 결제 정보는 자동 API 연동이 아닌 기록 보조 수준입니다.</li>
-          <li>백업/복원은 로컬 중심이며, 서버 동기화를 제공하지 않습니다.</li>
-          <li>기기 분실 또는 초기화 시 로컬에 저장된 데이터는 복구되지 않을 수 있습니다.</li>
-          <li>Dayfall은 감시 도구가 아닙니다. 사용자 본인의 회상을 돕기 위한 개인 도구입니다.</li>
+          <li>Location accuracy varies depending on device conditions, OS policy, battery optimization, and GPS environment.</li>
+          <li>Place records are based on locations where you stayed for approximately 15 minutes or more.</li>
+          <li>Full movement paths (continuous routes) are not stored.</li>
+          <li>No automatic financial connection — payment records are manual notes only.</li>
+          <li>Backup and restore are local only — no cloud sync is provided.</li>
+          <li>Data stored locally may not be recoverable if your device is lost or reset without a prior backup.</li>
+          <li>Dayfall is not a surveillance tool. It is a personal memory aid for your own use only.</li>
         </ul>
 
         <div class="notice-box">
           <p>
-            <strong>중요:</strong> Dayfall에 기록된 모든 내용은 사용자의 기기 안에만 존재합니다.
-            Timeborns는 사용자의 회상 기록, 장소 데이터, 사진에 접근하거나 이를 수집하지 않습니다.
+            <strong>Important:</strong> Everything recorded in Dayfall exists only on your device.
+            Timeborns does not access, collect, or process your recall records, location data, or photos.
           </p>
         </div>
       </div>
@@ -248,7 +247,7 @@
     <section class="section" style="background:var(--parchment);padding-bottom:80px;">
       <div class="container">
         <div class="policy-links-box">
-          <p>Dayfall 관련 정책 문서</p>
+          <p>Dayfall Policy Documents</p>
           <a href="./privacy/" class="policy-link-btn">Privacy Policy</a>
           <a href="./terms/" class="policy-link-btn">Terms of Service</a>
           <a href="../contact/" class="policy-link-btn">Contact Us</a>
@@ -291,7 +290,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Timeborns. All rights reserved. &nbsp;|&nbsp;
+        <p>&copy; 2026 Timeborns. All rights reserved. &nbsp;|&nbsp;
           <a href="./privacy/">Privacy Policy</a> &nbsp;·&nbsp;
           <a href="./terms/">Terms of Service</a> &nbsp;·&nbsp;
           <a href="../contact/">Contact</a>
