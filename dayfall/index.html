@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dayfall — A Memory Calendar · Timeborns</title>
   <meta name="description" content="What did I actually do that day? Dayfall is a local-first memory calendar that helps you recall the past through photos, places, notes, and events." />
+  <link rel="canonical" href="https://timeborns.com/dayfall/" />
+  <meta property="og:title"       content="Dayfall — A Memory Calendar · Timeborns" />
+  <meta property="og:description" content="A memory calendar for the days you lived. Photos, places, notes, and events — all stored on your own device." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://timeborns.com/dayfall/" />
+  <meta property="og:image"       content="https://timeborns.com/assets/images/og-dayfall.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name"    content="TimeBorns" />
   <link rel="stylesheet" href="../style.css" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,12 +28,7 @@
   <!-- NAVIGATION -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="../" class="nav-logo" aria-label="Timeborns home">
-      <svg viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2" y="1.5" width="24" height="5" rx="2.5" fill="#c8a96e"/>
-        <rect x="2" y="37.5" width="24" height="5" rx="2.5" fill="#c8a96e"/>
-        <path d="M4 6.5 L24 6.5 L15.5 22 L24 37.5 L4 37.5 L12.5 22 Z" stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-        <path d="M4 6.5 L24 6.5 L15.5 22 L4 6.5 Z" fill="#c8a96e" fill-opacity="0.38"/>
-      </svg>
+      <img src="/assets/hourglass.svg" alt="" width="26" height="40" class="brand-mark" aria-hidden="true">
       <span class="nav-logo-text">TIMEBORNS</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
@@ -66,7 +70,7 @@
       <div class="container">
         <div class="dayfall-intro-grid">
           <div>
-            <h2 class="dayfall-question" id="dfQuestion">"그날 뭐 했지?"</h2>
+            <h2 class="dayfall-question" id="dfQuestion" lang="ko">"그날 뭐 했지?"</h2>
             <div class="divider-gold"></div>
             <p class="dayfall-intro-body">
               Dayfall is not a traditional schedule planner.
@@ -84,8 +88,9 @@
             </p>
           </div>
           <div aria-hidden="true" style="display:flex;align-items:center;justify-content:center;">
-            <img src="../assets/images/app-dayfall.png"
+            <img src="../assets/images/app-dayfall.webp"
                  alt="Dayfall app preview"
+                 width="540" height="720" loading="lazy"
                  style="max-width:280px;width:100%;display:block;border-radius:16px;box-shadow:0 12px 40px rgba(44,36,22,0.2);object-fit:contain;">
           </div>
         </div>
@@ -147,7 +152,7 @@
         <div class="divider-gold"></div>
         <p style="font-size:1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:28px;max-width:640px;">
           Dayfall was designed from the start to work without a server and without a login.
-          Your recall records live only inside your own device.
+          Your memory records live only inside your own device.
         </p>
 
         <div class="privacy-badges" role="list">
@@ -237,7 +242,7 @@
         <div class="notice-box">
           <p>
             <strong>Important:</strong> Everything recorded in Dayfall exists only on your device.
-            Timeborns does not access, collect, or process your recall records, location data, or photos.
+            Timeborns does not access, collect, or process your memory records, location data, or photos.
           </p>
         </div>
       </div>
@@ -262,12 +267,7 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          <svg viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="2" y="1.5" width="24" height="5" rx="2.5" fill="#c8a96e"/>
-            <rect x="2" y="37.5" width="24" height="5" rx="2.5" fill="#c8a96e"/>
-            <path d="M4 6.5 L24 6.5 L15.5 22 L24 37.5 L4 37.5 L12.5 22 Z" stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-            <path d="M4 6.5 L24 6.5 L15.5 22 L4 6.5 Z" fill="#c8a96e" fill-opacity="0.38"/>
-          </svg>
+          <img src="/assets/hourglass.svg" alt="" width="22" height="34" class="brand-mark" aria-hidden="true">
           <span class="footer-name">TIMEBORNS</span>
           <span class="footer-tagline">Born through time.</span>
         </div>
@@ -291,6 +291,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Timeborns. All rights reserved. &nbsp;|&nbsp;
+          <a href="../the-rules/">The Rules</a> &nbsp;·&nbsp;
           <a href="./privacy/">Privacy Policy</a> &nbsp;·&nbsp;
           <a href="./terms/">Terms of Service</a> &nbsp;·&nbsp;
           <a href="../contact/">Contact</a>

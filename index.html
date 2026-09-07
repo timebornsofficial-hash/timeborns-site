@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,11 @@
   <meta property="og:description" content="Small apps for remembering the past, organizing the present, and changing the future self." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://timeborns.com" />
-  <meta property="og:image"       content="https://timeborns.com/assets/images/hero-timeborns.png" />
+  <meta property="og:image"       content="https://timeborns.com/assets/images/og-timeborns.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name"    content="TimeBorns" />
+  <link rel="canonical" href="https://timeborns.com/" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -24,15 +28,7 @@
   <!-- NAVIGATION -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="./" class="nav-logo" aria-label="Timeborns home">
-      <svg viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <rect x="2"  y="1.5" width="24" height="5"  rx="2.5" fill="#c8a96e"/>
-        <rect x="2"  y="37.5" width="24" height="5" rx="2.5" fill="#c8a96e"/>
-        <path d="M4 6.5 L24 6.5 L15.5 22 L24 37.5 L4 37.5 L12.5 22 Z"
-              stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-        <path d="M4 6.5 L24 6.5 L15.5 22 L4 6.5 Z" fill="#c8a96e" fill-opacity="0.38"/>
-        <path d="M14 22 Q14.4 25.5 15 29" stroke="#c8a96e" stroke-width="1.2"
-              stroke-linecap="round" opacity="0.55"/>
-      </svg>
+      <img src="/assets/hourglass.svg" alt="" width="26" height="40" class="brand-mark" aria-hidden="true">
       <span class="nav-logo-text">TIMEBORNS</span>
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" id="navToggle">
@@ -48,7 +44,7 @@
 
   <main>
 
-    <!-- ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 HERO ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 -->
+    <!-- HERO -->
     <section class="hero" aria-labelledby="heroTitle">
 
       <!-- Left: Text content -->
@@ -57,7 +53,7 @@
         <h1 class="hero-title" id="heroTitle">
           Born through time,<br>shaped by memory.
         </h1>
-        <p class="hero-tagline-kr">시간을 지나며, 우리는 만들어진다.</p>
+        <p class="hero-tagline-kr" lang="ko">시간을 지나며, 우리는 만들어진다.</p>
         <p class="hero-sub">
           Small apps for remembering the past,<br>
           organizing the present,<br>
@@ -71,8 +67,10 @@
 
       <!-- Right: Hero image -->
       <div class="hero-visual" aria-hidden="true">
-        <img src="assets/images/hero-timeborns.png"
-             alt="Atmospheric Timeborns hero illustration with hourglass, journal, and botanical elements"
+        <img src="assets/images/hero-timeborns.webp"
+             alt=""
+             width="1400" height="788"
+             fetchpriority="high"
              class="hero-img">
       </div>
     </section>
@@ -85,7 +83,7 @@
       </svg>
     </div>
 
-    <!-- ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 PHILOSOPHY / STORY ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 -->
+    <!-- PHILOSOPHY / STORY -->
     <section class="philosophy section" id="story" aria-labelledby="philoTitle">
 
       <div class="container">
@@ -102,12 +100,12 @@
               At Timeborns, we create small, thoughtful tools to help you remember
               what matters, stay present with intention, and grow into who you are becoming.
             </p>
-            <p class="philosophy-body">
+            <p class="philosophy-body" lang="ko">
               과거를 돌아보고, 현재를 기록하고, 미래의 나를 바꾸는 작은 앱들.
             </p>
           </div>
           <aside class="phil-note" aria-hidden="true">
-            <img src="assets/images/philosophy-note.png" alt="" class="phil-note-img">
+            <img src="assets/images/philosophy-note.webp" alt="" width="577" height="433" loading="lazy" class="phil-note-img">
           </aside>
         </div>
 
@@ -115,21 +113,21 @@
         <div class="pillars" role="list">
           <div class="pillar" role="listitem">
             <div class="pillar-img-wrap" aria-hidden="true">
-              <img src="assets/images/philosophy-remember.png" alt="" class="pillar-img">
+              <img src="assets/images/philosophy-remember.webp" alt="" width="560" height="560" loading="lazy" class="pillar-img">
             </div>
             <h3 class="pillar-title">Remember the past</h3>
             <p class="pillar-body">Honor your story.<br>It shaped you.</p>
           </div>
           <div class="pillar" role="listitem">
             <div class="pillar-img-wrap" aria-hidden="true">
-              <img src="assets/images/philosophy-organize.png" alt="" class="pillar-img">
+              <img src="assets/images/philosophy-organize.webp" alt="" width="560" height="560" loading="lazy" class="pillar-img">
             </div>
             <h3 class="pillar-title">Organize the present</h3>
             <p class="pillar-body">Clarity today<br>creates freedom.</p>
           </div>
           <div class="pillar" role="listitem">
             <div class="pillar-img-wrap" aria-hidden="true">
-              <img src="assets/images/philosophy-change.png" alt="" class="pillar-img">
+              <img src="assets/images/philosophy-change.webp" alt="" width="560" height="560" loading="lazy" class="pillar-img">
             </div>
             <h3 class="pillar-title">Change the future self</h3>
             <p class="pillar-body">Small choices now<br>build the life you dream of.</p>
@@ -146,24 +144,25 @@
       </svg>
     </div>
 
-    <!-- ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 APP UNIVERSE ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 -->
+    <!-- APP UNIVERSE -->
     <section class="app-universe section" id="apps" aria-labelledby="appsTitle">
       <div class="container">
         <header class="app-universe-header">
           <p class="section-label">App Universe</p>
           <h2 class="app-universe-title" id="appsTitle">Tools for every moment of becoming.</h2>
           <div class="divider-gold center"></div>
-          <p class="app-universe-sub">Five tools. One journey. You.</p>
+          <p class="app-universe-sub">Different tools. One journey. You.</p>
         </header>
 
         <div class="apps-grid" role="list">
 
-          <!-- Dayfall (active ??links to /dayfall/) -->
+          <!-- Dayfall (active - links to /dayfall/) -->
           <article class="app-card app-card--dayfall" role="listitem">
-            <a href="./dayfall/" aria-label="Learn more about Dayfall — recall calendar app">
+            <a href="./dayfall/" aria-label="Learn more about Dayfall — memory calendar app">
               <div class="app-card-visual">
-                <img src="assets/images/app-dayfall.png"
+                <img src="assets/images/app-dayfall.webp"
                      alt="Dayfall app illustration"
+                     width="540" height="720" loading="lazy"
                      class="card-illust">
                 <span class="app-card-name">Dayfall</span>
               </div>
@@ -174,11 +173,30 @@
             </div>
           </article>
 
+          <!-- The Rules (active - links to /the-rules/) -->
+          <article class="app-card app-card--the-rules" role="listitem">
+            <a href="./the-rules/" aria-label="Learn more about The Rules — personal rulebook app">
+              <div class="app-card-visual">
+                <img src="assets/images/app-the-rules.webp"
+                     alt="The Rules app illustration"
+                     width="540" height="720" loading="lazy"
+                     class="card-illust">
+                <span class="app-card-name">The Rules</span>
+                <span class="app-card-status">Available now</span>
+              </div>
+            </a>
+            <div class="app-card-body">
+              <span class="app-card-link">Discipline · Streaks</span>
+              <p class="app-card-desc">Decide once. Keep the rest.</p>
+            </div>
+          </article>
+
           <!-- W² (inactive placeholder) -->
           <article class="app-card app-card--w2 app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/images/app-w2.png"
+              <img src="assets/images/app-w2.webp"
                    alt="W² app illustration"
+                   width="540" height="720" loading="lazy"
                    class="card-illust">
               <span class="app-card-name">W²</span>
               <span class="app-card-coming">Coming soon</span>
@@ -192,8 +210,9 @@
           <!-- AfterNote (inactive placeholder) -->
           <article class="app-card app-card--afternote app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/images/app-afternote.png"
+              <img src="assets/images/app-afternote.webp"
                    alt="AfterNote app illustration"
+                   width="540" height="720" loading="lazy"
                    class="card-illust">
               <span class="app-card-name">AfterNote</span>
               <span class="app-card-coming">Coming soon</span>
@@ -207,8 +226,9 @@
           <!-- FutureMe (inactive placeholder) -->
           <article class="app-card app-card--futureme app-card--inactive" role="listitem">
             <div class="app-card-visual">
-              <img src="assets/images/app-futureme.png"
+              <img src="assets/images/app-futureme.webp"
                    alt="FutureMe app illustration"
+                   width="540" height="720" loading="lazy"
                    class="card-illust">
               <span class="app-card-name">FutureMe</span>
               <span class="app-card-coming">Coming soon</span>
@@ -219,21 +239,6 @@
             </div>
           </article>
 
-          <!-- LifeRules (inactive placeholder) -->
-          <article class="app-card app-card--liferules app-card--inactive" role="listitem">
-            <div class="app-card-visual">
-              <img src="assets/images/app-liferules.png"
-                   alt="LifeRules app illustration"
-                   class="card-illust">
-              <span class="app-card-name">LifeRules</span>
-              <span class="app-card-coming">Coming soon</span>
-            </div>
-            <div class="app-card-body">
-              <span class="app-card-link">Principles · Purpose</span>
-              <p class="app-card-desc">Your principles. Your compass. Your life, on purpose.</p>
-            </div>
-          </article>
-
         </div>
 
       </div>
@@ -241,18 +246,12 @@
 
   </main>
 
-  <!-- ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 FOOTER ?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧?먥븧 -->
+  <!-- FOOTER -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-logo">
-          <svg viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="2"  y="1.5"  width="24" height="5"  rx="2.5" fill="#c8a96e"/>
-            <rect x="2"  y="37.5" width="24" height="5"  rx="2.5" fill="#c8a96e"/>
-            <path d="M4 6.5 L24 6.5 L15.5 22 L24 37.5 L4 37.5 L12.5 22 Z"
-                  stroke="#c8a96e" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-            <path d="M4 6.5 L24 6.5 L15.5 22 L4 6.5 Z" fill="#c8a96e" fill-opacity="0.38"/>
-          </svg>
+          <img src="/assets/hourglass.svg" alt="" width="22" height="34" class="brand-mark" aria-hidden="true">
           <span class="footer-name">TIMEBORNS</span>
           <span class="footer-tagline">Born through time.</span>
         </div>
@@ -276,9 +275,8 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 Timeborns. All rights reserved. &nbsp;|&nbsp;
+          <a href="./the-rules/">The Rules</a> &nbsp;·&nbsp;
           <a href="./dayfall/">Dayfall</a> &nbsp;·&nbsp;
-          <a href="./dayfall/privacy/">Privacy</a> &nbsp;·&nbsp;
-          <a href="./dayfall/terms/">Terms</a> &nbsp;·&nbsp;
           <a href="./contact/">Contact</a>
         </p>
       </div>
@@ -302,5 +300,3 @@
 
 </body>
 </html>
-
-

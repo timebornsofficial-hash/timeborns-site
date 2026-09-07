@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 44" width="28" height="44" role="img" aria-label="Timeborns hourglass">
+  <title>Timeborns hourglass</title>
+  <defs>
+    <linearGradient id="tbCap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e2cb9c"/>
+      <stop offset="55%"  stop-color="#c8a96e"/>
+      <stop offset="100%" stop-color="#ab8b52"/>
+    </linearGradient>
+    <linearGradient id="tbGlass" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%"   stop-color="#e6d2a8"/>
+      <stop offset="48%"  stop-color="#c8a96e"/>
+      <stop offset="100%" stop-color="#b0904f"/>
+    </linearGradient>
+    <linearGradient id="tbSandTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8d5ab" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#c8a96e" stop-opacity="0.30"/>
+    </linearGradient>
+    <linearGradient id="tbSandLow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d9bf8b" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#c8a96e" stop-opacity="0.66"/>
+    </linearGradient>
+  </defs>
+
+  <!-- upper sand, resting against the shoulder of the bulb -->
+  <path d="M5.6 8.6 C8.4 8.2 19.6 8.2 22.4 8.6 C21.4 13.6 17.6 18.4 14 21.3
+           C10.4 18.4 6.6 13.6 5.6 8.6 Z"
+        fill="url(#tbSandTop)"/>
+
+  <!-- lower sand, settled mound -->
+  <path d="M6.9 36.9 C7.9 32.9 10.6 31.2 14 31.2 C17.4 31.2 20.1 32.9 21.1 36.9 Z"
+        fill="url(#tbSandLow)"/>
+
+  <!-- thin falling stream -->
+  <path d="M14 22.2 C14.25 25.6 13.85 28.6 14 31.1"
+        stroke="#d9bf8b" stroke-width="0.7" stroke-linecap="round"
+        fill="none" opacity="0.6"/>
+
+  <!-- glass body: two softly curved bulbs meeting at the neck -->
+  <path d="M4.7 6.9 C5.2 13.6 10.3 18.6 14 21.75 C17.7 18.6 22.8 13.6 23.3 6.9"
+        stroke="url(#tbGlass)" stroke-width="1.35" stroke-linecap="round"
+        stroke-linejoin="round" fill="none"/>
+  <path d="M4.7 37.1 C5.2 30.4 10.3 25.4 14 22.25 C17.7 25.4 22.8 30.4 23.3 37.1"
+        stroke="url(#tbGlass)" stroke-width="1.35" stroke-linecap="round"
+        stroke-linejoin="round" fill="none"/>
+
+  <!-- glass highlight -->
+  <path d="M7.4 9.4 C8.2 13.2 10.6 16.6 12.6 18.7"
+        stroke="#f4e6c6" stroke-width="0.65" stroke-linecap="round"
+        fill="none" opacity="0.5"/>
+  <path d="M15.5 25.6 C17.4 27.7 19.6 30.9 20.4 34.4"
+        stroke="#f4e6c6" stroke-width="0.6" stroke-linecap="round"
+        fill="none" opacity="0.32"/>
+
+  <!-- caps -->
+  <rect x="2" y="1.5"  width="24" height="5" rx="2.5" fill="url(#tbCap)"/>
+  <rect x="2" y="37.5" width="24" height="5" rx="2.5" fill="url(#tbCap)"/>
+</svg>
