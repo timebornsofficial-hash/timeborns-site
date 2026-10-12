@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dayfall Privacy Policy — Timeborns</title>
-  <meta name="description" content="Dayfall Privacy Policy. Your data stays on your device. No servers, no login, no cloud sync." />
+  <meta name="description" content="How Dayfall handles local memories, photo and background location permissions, encrypted backups, Android system backup, and third-party advertising." />
   <link rel="canonical" href="https://timeborns.com/dayfall/privacy/" />
   <meta property="og:title"       content="Dayfall Privacy Policy — Timeborns" />
-  <meta property="og:description" content="Your data stays on your device. No servers, no login, no cloud sync." />
+  <meta property="og:description" content="Dayfall uses local-first memory storage. Read about permissions, backups, sharing, and third-party services." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://timeborns.com/dayfall/privacy/" />
   <meta property="og:image"       content="https://timeborns.com/assets/images/og-dayfall.jpg" />
@@ -22,8 +22,16 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#f7efe2">
+  <style>
+    .dayfall-policy { overflow-wrap: anywhere; }
+    .dayfall-policy .page-hero-sub,
+    .dayfall-policy .policy-date,
+    .dayfall-policy .policy-links-box p { color: var(--ink-mid); }
+    .dayfall-policy .footer-link { min-width: 0; }
+    .dayfall-policy .footer-icon { flex-shrink: 0; }
+  </style>
 </head>
-<body>
+<body class="dayfall-policy">
 
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <a href="../../" class="nav-logo" aria-label="Timeborns home">
@@ -54,8 +62,8 @@
         <span class="page-hero-eyebrow">Dayfall · Legal</span>
         <h1 class="page-hero-title" id="privacyTitle">Privacy Policy</h1>
         <p class="page-hero-sub">
-          Dayfall is built on a simple principle: your memories belong to you, on your device.
-          This policy explains exactly how your data is handled — and what we never do with it.
+          Dayfall is built around local-first memory storage.
+          This policy explains permissions, backups, sharing, and third-party services.
         </p>
       </div>
     </section>
@@ -63,7 +71,7 @@
     <div class="page-content">
 
       <div class="policy-date">
-        <strong>Effective Date:</strong> June 1, 2026 &nbsp;·&nbsp;
+        <strong>Effective Date:</strong> October 12, 2026 &nbsp;·&nbsp;
         <strong>App:</strong> Dayfall &nbsp;·&nbsp;
         <strong>Developer:</strong> Timeborns
         (<a href="mailto:timebornsofficial@gmail.com" style="color:var(--gold-dark);">timebornsofficial@gmail.com</a>)
@@ -73,15 +81,16 @@
         <h2>1. Overview</h2>
         <p>
           Dayfall is a local-first memory calendar. It helps you remember past days through
-          photos, places, notes, and events — entirely on your own device.
+          photos, places, notes, events, and payment traces you add yourself.
         </p>
         <p>
-          <strong>Dayfall does not collect, transmit, or store your personal data on any external server.</strong>
-          There is no account system, no cloud synchronization, and no backend service
-          that receives or processes your personal information.
+          <strong>Dayfall does not require a TimeBorns account or provide a TimeBorns cloud sync service.</strong>
+          Your memory records are stored locally in the app and are not uploaded to a TimeBorns server.
         </p>
         <p>
-          All data you create within Dayfall stays on your device. You are in full control of it.
+          Android system backup, place-name lookup, and the advertising SDK can involve
+          separate third-party processing. You can also choose to export a backup or save
+          or share a Memory Card. These cases are explained below.
         </p>
       </div>
 
@@ -92,50 +101,61 @@
           as a result of using Dayfall:
         </p>
         <ul>
-          <li>Representative photos you select for each day (stored as references to your photo library)</li>
+          <li>Representative photos, stored as optimized, app-managed local copies with thumbnails</li>
           <li>Location records derived from places you stayed for a significant amount of time (see Section 3.2)</li>
           <li>Text notes and memos you write within the app</li>
-          <li>Manual payment or activity records you add as memory cues</li>
+          <li>Payment details you enter and the original payment text you paste when adding a record</li>
           <li>Calendar events, birthdays, anniversaries, and other important dates you enter</li>
           <li>App preferences and settings</li>
         </ul>
         <p>
-          None of this information is transmitted to Timeborns or any third party
-          by Timeborns. It remains on your device.
+          Dayfall does not upload these memory records to a TimeBorns server.
+          Backup, sharing, and third-party processing are described in Sections 3, 5, and 6.
         </p>
       </div>
 
       <div class="policy-section">
         <h2>3. Permissions Used</h2>
 
-        <h3>3.1 Photo Library Access</h3>
+        <h3>3.1 Photos and System Photo Selection</h3>
         <p>
-          Dayfall requests access to your photo library so you can select a representative
-          photo for each day and view photo metadata (such as capture date and time)
-          as memory cues.
+          Dayfall requests photo library access on first use of a photo feature.
+          Full library access supports finding a representative photo for a day automatically.
+          On supported Android versions, you can allow full access, allow selected photos,
+          or decline library access.
         </p>
         <p>
-          Photos are read locally only. They are not uploaded, transmitted, or processed
-          outside of your device. Timeborns never accesses your photos.
+          Manual selection uses the system photo selection interface, including Android's
+          Photo Picker where supported. This is separate from broader library access:
+          manual selection remains available where supported with selected-photo access or
+          after declining library access. Dayfall stores an optimized local copy and thumbnail
+          of the chosen image. There is no in-app camera capture feature in Android v1.0.
+        </p>
+        <p>
+          Dayfall does not upload your photos to a TimeBorns server. Copies may be included
+          in backups or in a Memory Card you choose to save or share (see Sections 5 and 6).
         </p>
 
         <h3>3.2 Location (Including Background Location)</h3>
         <p>
-          Dayfall may request location permission — including the "Always Allow" (background
-          location) option — to help reconstruct which places you visited during the day.
+          With your permission, Dayfall uses location, including background location,
+          to remember meaningful places where you stayed even when the app is closed or
+          not in use. Android may label background access "Allow all the time."
         </p>
         <p>How location data is used:</p>
         <ul>
           <li>Only significant stay locations (roughly 15 minutes or more of continuous presence) are recorded. Continuous movement paths are not stored.</li>
           <li>Background location access, if granted, allows place detection even when the app is not actively open, so your day's location story can be reconstructed later.</li>
-          <li>All location data is processed and stored on your device only. It is not sent to Timeborns or any third party by Timeborns.</li>
+          <li>Stay records are stored locally. Dayfall passes coordinates to Android's geocoding service to obtain approximate place names. The system provider may process this lookup over a network; it is not a TimeBorns cloud sync service.</li>
+          <li>Names may describe a neighborhood or district rather than an exact venue.</li>
           <li>Location accuracy depends on your device hardware, GPS conditions, OS-level battery optimization, and network environment. Dayfall cannot guarantee complete or perfectly accurate location capture.</li>
         </ul>
 
         <h3>3.3 Notifications</h3>
         <p>
           Dayfall requests notification permission to send local reminders for events
-          you have added — such as birthdays, anniversaries, significant dates, and calendar entries.
+          you have added — such as birthdays, anniversaries, significant dates, and calendar entries —
+          and gentle prompts to record or reflect on your day.
         </p>
         <p>
           All notifications are generated locally on your device.
@@ -146,14 +166,14 @@
       <div class="policy-section">
         <h2>4. Payment / Transaction Records</h2>
         <p>
-          Dayfall may offer a feature to record payment or transaction details as memory cues
-          for a given day. This is a <strong>manual, user-entered record</strong> only.
+          Dayfall lets you add payment details as memory cues by typing them yourself or
+          pasting payment message text. When a record is created from pasted text,
+          <strong>the original pasted text is stored locally with the payment record</strong>.
         </p>
         <p>
           Dayfall does not connect to financial institutions, banks, card networks,
-          or any financial API. There is no automatic transaction import or
-          financial data synchronization. Any payment records in Dayfall are entered
-          by you, stored locally, and serve as personal memory cues only.
+          or any financial API. It does not automatically access or read your SMS inbox.
+          Any payment records are added by you, stored locally, and serve as personal memory cues only.
         </p>
       </div>
 
@@ -162,58 +182,70 @@
 
         <h3>5.1 Advertising</h3>
         <p>
-          Dayfall may include advertisements served by a third-party advertising network
-          (such as Google AdMob or a similar service). If enabled, the ad network may
-          collect certain device identifiers (such as an advertising ID) and limited
-          usage signals to serve advertisements, in accordance with that network's own
-          privacy policy.
+          Dayfall's Android v1.0 build integrates Google AdMob (the Google Mobile Ads SDK).
+          Banner ads appear at the bottom of the calendar home and day detail screens when
+          an ad loads. A rewarded ad is requested only after you choose and confirm Memory Card
+          creation; the card opens after the ad reward is confirmed.
         </p>
         <p>
-          Timeborns does not pass your personal memory records, notes, photos, or location
-          records to any advertising partner. You may be able to limit ad personalization
-          through your device's privacy settings (e.g., "Limit Ad Tracking" on iOS,
-          or "Opt out of Ads Personalization" on Android).
+          Dayfall does not attach your memory records, notes, photos, pasted payment text,
+          or stored place history to its ad requests. This is separate from the SDK's own
+          data processing: Google describes collection and sharing of IP addresses,
+          device or account identifiers, ad interactions, and diagnostic information
+          for advertising, analytics, and fraud prevention. IP addresses may be used
+          to estimate a device's general location. Processing depends on SDK configuration
+          and applicable device and consent settings.
         </p>
         <p>
-          If advertising is not currently active in your version of Dayfall,
-          this section describes our general policy position for future builds.
-        </p>
-
-        <h3>5.2 In-App Purchases (if offered)</h3>
-        <p>
-          Dayfall may offer optional in-app purchases to unlock features or remove
-          advertising, if such functionality is made available. Any purchase transactions
-          are processed entirely by Apple (App Store) or Google (Play Store) according to
-          their own privacy policies. Timeborns does not receive or store your
-          payment card information.
+          See Google's <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" style="color:var(--gold-dark);">Mobile Ads data disclosure</a>
+          and <a href="https://policies.google.com/privacy" style="color:var(--gold-dark);">Privacy Policy</a>.
+          Advertising ID controls are available in Android settings; available choices vary by device.
         </p>
 
-        <h3>5.3 Crash Reporting and Analytics (if enabled)</h3>
+        <h3>5.2 In-App Purchases</h3>
         <p>
-          Dayfall may use a crash reporting or stability tool (such as Firebase Crashlytics
-          or a similar service) to detect technical errors and improve app stability,
-          if such a service is integrated. If used, it collects anonymized, aggregated
-          technical data (crash logs, device model, OS version) and does not include
-          your personal memory records, notes, photos, or location history.
+          In-app purchases are not available in the planned Android v1.0 release.
+        </p>
+
+        <h3>5.3 Crash Reporting and Analytics</h3>
+        <p>
+          Android v1.0 does not integrate a separate app analytics or crash reporting service
+          such as Firebase Crashlytics. The advertising SDK's own diagnostics and analytics
+          are described in Section 5.1.
         </p>
         <p>
-          The core functionality of Dayfall — recalling your day — does not require
-          any account, cloud service, or external analytics.
+          Recalling your locally stored memories does not require a TimeBorns account.
+        </p>
+        <h3>5.4 Memory Card Sharing</h3>
+        <p>
+          A Memory Card is generated on your device from the day's memories. When you choose
+          to save or share it, a copy goes to the destination or app you select. That destination's
+          handling of the shared content is separate from Dayfall's local storage.
         </p>
       </div>
 
       <div class="policy-section">
         <h2>6. Backup and Data Recovery</h2>
         <p>
-          All Dayfall data is local to your device. Backup functionality, if available,
-          is provided through a local export only — for example, a file you save
-          to your own storage. Timeborns does not provide cloud backup or
-          remote data recovery services.
+          <strong>Dayfall backup files:</strong> You can manually create a backup encrypted
+          with a password you choose, then select its storage destination through the system
+          file interface. Restoring requires the backup file and its password. A destination
+          you choose may be on your device or with a third-party storage provider.
+          TimeBorns does not operate a cloud backup or remote recovery service.
         </p>
         <p>
-          If your device is lost, reset, or replaced without a local backup,
-          your Dayfall data may not be recoverable. You are responsible for
-          maintaining your own backups.
+          <strong>Android system backup:</strong> Android Auto Backup remains enabled as a
+          separate safety net. Depending on your device and settings, Android may back up
+          eligible app data to your Google Account or transfer data to another device.
+          Inclusion and restoration depend on the OS, device settings, storage limits,
+          and backup rules. This does not guarantee that all photos or database records
+          will be backed up or restored.
+        </p>
+        <p>
+          Keep your own encrypted backup file and password safe. If your device is lost,
+          reset, or replaced without a usable backup, your memories may not be recoverable.
+          You are responsible for maintaining your own backups; successful backup and
+          complete restoration are not guaranteed.
         </p>
       </div>
 
@@ -250,7 +282,7 @@
           <strong>Email:</strong>
           <a href="mailto:timebornsofficial@gmail.com" style="color:var(--gold-dark);">timebornsofficial@gmail.com</a><br/>
           <strong>Website:</strong>
-          <a href="https://timeborns.com" style="color:var(--gold-dark);">timeborns.com</a>
+          <a href="https://timeborns.com/contact/" style="color:var(--gold-dark);">timeborns.com/contact/</a>
         </p>
         <p>
           Korean-language inquiries are welcome. 한국어 문의도 환영합니다.

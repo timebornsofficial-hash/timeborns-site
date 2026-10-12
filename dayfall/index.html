@@ -7,7 +7,7 @@
   <meta name="description" content="What did I actually do that day? Dayfall is a local-first memory calendar that helps you recall the past through photos, places, notes, and events." />
   <link rel="canonical" href="https://timeborns.com/dayfall/" />
   <meta property="og:title"       content="Dayfall — A Memory Calendar · Timeborns" />
-  <meta property="og:description" content="A memory calendar for the days you lived. Photos, places, notes, and events — all stored on your own device." />
+  <meta property="og:description" content="A memory calendar for the days you lived. Recall photos, meaningful places, notes, and important dates with local-first storage. Android — coming soon." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://timeborns.com/dayfall/" />
   <meta property="og:image"       content="https://timeborns.com/assets/images/og-dayfall.jpg" />
@@ -22,8 +22,38 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#f7efe2">
+  <style>
+    /* Dayfall only: keep the shared site palette, typography and components. */
+    .dayfall-page { overflow-wrap: anywhere; }
+    .dayfall-page .dayfall-heading {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+    .dayfall-page .dayfall-copy { max-width: 70ch; color: var(--ink-mid); margin-bottom: 20px; }
+    .dayfall-page .page-hero-sub,
+    .dayfall-page .feature-card p,
+    .dayfall-page .policy-links-box p { color: var(--ink-mid); }
+    .dayfall-page .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .dayfall-page .dayfall-more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dayfall-page .dayfall-get { max-width: 760px; min-height: 0; }
+    .dayfall-page .dayfall-get p:last-child { margin-bottom: 0; }
+    .dayfall-page .permission-card p + p { margin-top: 12px; }
+    .dayfall-page .dayfall-copy a { text-decoration: underline; text-underline-offset: 3px; }
+    .dayfall-page .footer-link { min-width: 0; }
+    .dayfall-page .footer-icon { flex-shrink: 0; }
+    @media (max-width: 1040px) {
+      .dayfall-page .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .dayfall-page .features-grid { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
 </head>
-<body>
+<body class="dayfall-page">
 
   <!-- NAVIGATION -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -74,18 +104,13 @@
             <h2 class="dayfall-question" id="dfQuestion" lang="ko">"그날 뭐 했지?"</h2>
             <div class="divider-gold"></div>
             <p class="dayfall-intro-body">
-              Dayfall is not a traditional schedule planner.
-              It is not about what you are going to do.
-              It is a quiet memory calendar that helps you remember
-              <strong>the days you have already lived.</strong>
+              Dayfall helps you remember <strong>the days you have already lived</strong>
+              through photos, places you stayed, short notes, important dates,
+              and payment traces you add yourself.
             </p>
             <p class="dayfall-intro-body">
-              With photos, places, short notes, payment traces, and events,
-              Dayfall helps you bring back the shape of a day.
-              Your data stays on your device — no login, no server required.
-            </p>
-            <p class="dayfall-intro-body">
-              "What did I actually do that day?" — Dayfall helps you remember.
+              A quiet memory calendar for looking back on your day.
+              Bring back the shape of a day, in your own time.
             </p>
           </div>
           <div class="app-detail-visual-wrap" aria-hidden="true">
@@ -120,60 +145,80 @@
         <div class="features-grid">
           <div class="feature-card">
             <h3>📸 Representative Photo</h3>
-            <p>Set a photo that best captures the atmosphere of the day. Choose from your gallery or take a new one with the camera.</p>
+            <p>Choose one photo to help bring a day back. Dayfall keeps an optimized, app-managed local copy.</p>
           </div>
           <div class="feature-card">
-            <h3>📍 Place History</h3>
-            <p>Review the places you visited throughout the day in chronological order. Records focus on locations where you stayed for a meaningful amount of time.</p>
+            <h3>📍 Meaningful Places</h3>
+            <p>Recall places where you stayed for a while. Place records focus on significant stays, without storing a continuous travel route.</p>
           </div>
           <div class="feature-card">
-            <h3>✍️ One-Line Memo</h3>
-            <p>Summarize the day in a single sentence — a space to write how you want to remember this day.</p>
+            <h3>✍️ Short Notes</h3>
+            <p>Leave a small note for the moments worth remembering.</p>
           </div>
           <div class="feature-card">
             <h3>💳 Payment Traces</h3>
-            <p>A supporting clue to recall where you were and what you did. Based on manual records — no automatic financial connection.</p>
+            <p>Add payment clues yourself, by typing or pasting text. No bank or card account connection and no automatic SMS access.</p>
           </div>
           <div class="feature-card">
             <h3>📅 Events &amp; Anniversaries</h3>
             <p>Record birthdays, anniversaries, appointments, and other important dates — with local reminders.</p>
           </div>
           <div class="feature-card">
-            <h3>🔒 Local Storage</h3>
-            <p>All data stays on your device. No login required. Nothing is sent to the cloud.</p>
+            <h3>🏡 Home Widgets</h3>
+            <p>Calendar, Today, and Upcoming bring your days and important dates to your home screen.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PRIVACY PHILOSOPHY -->
+    <!-- ADDITIONAL FEATURES -->
+    <section class="dayfall-band section" aria-labelledby="moreTitle">
+      <div class="container">
+        <p class="section-label">Additional Features</p>
+        <h2 class="dayfall-heading" id="moreTitle">More ways to remember</h2>
+        <div class="divider-gold"></div>
+        <div class="features-grid dayfall-more">
+          <div class="feature-card">
+            <h3>Backup &amp; Restore</h3>
+            <p>Create a backup file encrypted with a password you choose, then choose where to save it. Use your file and password to restore your memories.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Memory Card</h3>
+            <p>Turn a day's memories into a card to save or share. If you choose to create a card, a rewarded ad is requested after your confirmation. The card opens after the ad reward is confirmed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY BY DESIGN -->
     <section class="dayfall-band section" aria-labelledby="privacyPhilosTitle">
       <div class="container">
-        <p class="section-label">Privacy Philosophy</p>
+        <p class="section-label">Privacy by Design</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:16px;" id="privacyPhilosTitle">
           Your memories belong to you.
         </h2>
         <div class="divider-gold"></div>
         <p style="font-size:1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:28px;max-width:640px;">
-          Dayfall was designed from the start to work without a server and without a login.
-          Your memory records live only inside your own device.
+          Dayfall stores your memories locally and does not require a TimeBorns account
+          or provide a TimeBorns cloud sync service. Android system backup, advertising,
+          and place-name services are separate, as described in our Privacy Policy.
         </p>
 
         <div class="privacy-badges" role="list">
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🚫</span> No login
+            <span aria-hidden="true">🚫</span> No TimeBorns account
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🌐</span> No server
+            <span aria-hidden="true">☁️</span> No TimeBorns cloud sync
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">☁️</span> No cloud sync
+            <span aria-hidden="true">📱</span> Local-first memory storage
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">📱</span> Data on device only
+            <span aria-hidden="true">💳</span> No bank API connection
           </div>
           <div class="badge" role="listitem">
-            <span aria-hidden="true">🔐</span> You are in control
+            <span aria-hidden="true">📍</span> No continuous route logging
           </div>
         </div>
       </div>
@@ -187,44 +232,50 @@
           What we ask for, and why
         </h2>
         <div class="divider-gold"></div>
-        <p style="font-size:0.95rem;color:var(--ink-light);margin-bottom:28px;">
-          Dayfall requests only the minimum permissions needed for its core features.
+        <p style="font-size:0.95rem;color:var(--ink-mid);margin-bottom:28px;">
+          Choose which permissions to allow for photos, place memories, and local reminders.
         </p>
 
         <div class="permission-cards">
           <div class="permission-card">
-            <h3>📸 Photo Library Access</h3>
+            <h3>📸 Photos</h3>
             <p>
-              Used to select a representative photo for each day and to display photo metadata
-              (such as capture date and time) as memory cues.
-              Photos are never uploaded or transmitted outside your device.
-              Timeborns never accesses your photos.
+              For selecting a representative photo and finding photo-based memory cues.
+              Library access is requested on first use of the photo feature.
+              Where supported, manual selection through the system photo picker remains
+              available with selected-photo access or after declining library access.
             </p>
           </div>
           <div class="permission-card">
-            <h3>📍 Location (including "Always Allow")</h3>
+            <h3>📍 Location, including background location</h3>
             <p>
-              Used to reconstruct which places you visited during the day.
-              Only locations where you stayed for roughly 15 minutes or more are recorded — not your full movement path.
-              Location data stays on your device and is never sent externally.
-              Background location may be needed to capture place history when the app is not open.
+              With your permission, Dayfall uses location in the background to remember
+              meaningful places where you stayed, even when the app is closed or not in use.
+              It records significant stays of roughly 15 minutes or more,
+              without storing a continuous travel route.
+            </p>
+            <p>
+              Android's geocoding service helps turn coordinates into approximate place names
+              and may use network services. Location accuracy and availability vary by device
+              and system settings.
             </p>
           </div>
           <div class="permission-card">
             <h3>🔔 Notifications</h3>
             <p>
-              Used to send local reminders for birthdays, anniversaries, and events you have added.
-              All notifications are generated locally on your device — no remote server involved.
+              For local reminders about birthdays, anniversaries, events you add,
+              and gentle prompts to look back on your day. These reminders are scheduled on your device.
             </p>
           </div>
         </div>
+        <p class="dayfall-copy">Battery optimization settings may affect background place detection and reminder delivery.</p>
       </div>
     </section>
 
     <!-- LIMITATIONS -->
     <section class="dayfall-band section" aria-labelledby="limitsTitle">
       <div class="container">
-        <p class="section-label">Limitations</p>
+        <p class="section-label">Honest Limitations</p>
         <h2 style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--ink);margin-bottom:8px;" id="limitsTitle">
           What Dayfall does not do
         </h2>
@@ -235,20 +286,40 @@
 
         <ul class="caveat-list">
           <li>Location accuracy varies depending on device conditions, OS policy, battery optimization, and GPS environment.</li>
-          <li>Place records are based on locations where you stayed for approximately 15 minutes or more.</li>
-          <li>Full movement paths (continuous routes) are not stored.</li>
-          <li>No automatic financial connection — payment records are manual notes only.</li>
-          <li>Backup and restore are local only — no cloud sync is provided.</li>
-          <li>Data stored locally may not be recoverable if your device is lost or reset without a prior backup.</li>
-          <li>Dayfall is not a surveillance tool. It is a personal memory aid for your own use only.</li>
+          <li>Place names may identify a neighborhood or district rather than a precise venue.</li>
+          <li>Place detection and local reminders may be delayed or missed because of permissions, battery restrictions, or system settings.</li>
+          <li>Keep your encrypted backup file and password safe. Android system backup is a separate safety net whose coverage depends on device settings, storage limits, and backup rules.</li>
+          <li>Complete recording, backup, and recovery are not guaranteed.</li>
         </ul>
 
         <div class="notice-box">
           <p>
-            <strong>Important:</strong> Everything recorded in Dayfall exists only on your device.
-            Timeborns does not access, collect, or process your memory records, location data, or photos.
+            <strong>Your choices matter:</strong> Saving or sharing a Memory Card and choosing
+            a backup destination can place copies outside Dayfall. Review the Privacy Policy
+            for Android backup and third-party service processing.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- GET DAYFALL -->
+    <section class="section" aria-labelledby="dayfallGet" style="background:var(--parchment);">
+      <div class="container">
+        <p class="section-label">Get Dayfall</p>
+        <h2 class="dayfall-heading" id="dayfallGet">Launching first in selected regions</h2>
+        <div class="divider-gold"></div>
+        <article class="platform-card dayfall-get">
+          <span class="platform-type">Android</span>
+          <h3>Coming soon on Google Play</h3>
+          <p>Dayfall has not launched on Google Play yet.</p>
+          <p>Planned initial release: South Korea, Japan, Taiwan, and Singapore. More regions will follow.</p>
+        </article>
+        <p class="dayfall-copy" style="margin-top:24px;">
+          App language support: 9 languages across 10 app locales — Korean, English, Japanese,
+          Chinese (Simplified and Traditional), Vietnamese, Spanish, French, German, and Indonesian.
+          Language support is separate from release availability; traveling does not change
+          your chosen app language based on GPS location.
+        </p>
       </div>
     </section>
 
