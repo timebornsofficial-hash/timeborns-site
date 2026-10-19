@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dayfall Privacy Policy — Timeborns</title>
-  <meta name="description" content="How Dayfall handles local memories, photo and background location permissions, encrypted backups, Android system backup, and third-party advertising." />
+  <meta name="description" content="How Dayfall handles local memories, photo and background location permissions, encrypted backups, Android backup rules, and third-party advertising." />
   <link rel="canonical" href="https://timeborns.com/dayfall/privacy/" />
   <meta property="og:title"       content="Dayfall Privacy Policy — Timeborns" />
   <meta property="og:description" content="Dayfall uses local-first memory storage. Read about permissions, backups, sharing, and third-party services." />
@@ -71,7 +71,7 @@
     <div class="page-content">
 
       <div class="policy-date">
-        <strong>Effective Date:</strong> October 12, 2026 &nbsp;·&nbsp;
+        <strong>Effective Date:</strong> October 19, 2026 &nbsp;·&nbsp;
         <strong>App:</strong> Dayfall &nbsp;·&nbsp;
         <strong>Developer:</strong> Timeborns
         (<a href="mailto:timebornsofficial@gmail.com" style="color:var(--gold-dark);">timebornsofficial@gmail.com</a>)
@@ -88,7 +88,7 @@
           Your memory records are stored locally in the app and are not uploaded to a TimeBorns server.
         </p>
         <p>
-          Android system backup, place-name lookup, and the advertising SDK can involve
+          Android device-to-device transfer, place-name lookup, and the advertising SDK can involve
           separate third-party processing. You can also choose to export a backup or save
           or share a Memory Card. These cases are explained below.
         </p>
@@ -204,7 +204,7 @@
 
         <h3>5.2 In-App Purchases</h3>
         <p>
-          In-app purchases are not available in the planned Android v1.0 release.
+          In-app purchases are not available in Android v1.0.
         </p>
 
         <h3>5.3 Crash Reporting and Analytics</h3>
@@ -230,22 +230,31 @@
           <strong>Dayfall backup files:</strong> You can manually create a backup encrypted
           with a password you choose, then select its storage destination through the system
           file interface. Restoring requires the backup file and its password. A destination
-          you choose may be on your device or with a third-party storage provider.
+          you choose may be a local folder or a third-party cloud storage service.
+          The selected provider's own terms and privacy practices apply.
           TimeBorns does not operate a cloud backup or remote recovery service.
         </p>
         <p>
-          <strong>Android system backup:</strong> Android Auto Backup remains enabled as a
-          separate safety net. Depending on your device and settings, Android may back up
-          eligible app data to your Google Account or transfer data to another device.
-          Inclusion and restoration depend on the OS, device settings, storage limits,
-          and backup rules. This does not guarantee that all photos or database records
-          will be backed up or restored.
+          <strong>Android backup and device-to-device transfer:</strong> Dayfall's backup
+          rules exclude its locally stored memory records from Android automatic cloud backup.
+          On Android 9 and later, these records may be transferred between devices,
+          depending on the device, operating-system behavior, settings, and transfer method. On Android 7 through 8.1,
+          these records are also excluded from device-to-device transfer by the app's backup rules.
+          Device transfer is separate from the encrypted backup files you create yourself
+          and does not replace your manual backup. It does not guarantee that all photos
+          or database records will be transferred or restored.
         </p>
         <p>
           Keep your own encrypted backup file and password safe. If your device is lost,
           reset, or replaced without a usable backup, your memories may not be recoverable.
           You are responsible for maintaining your own backups; successful backup and
           complete restoration are not guaranteed.
+        </p>
+        <p>
+          <strong>Deleting local data:</strong> You can delete memory records in the app.
+          Settings &gt; Delete all data removes local records and app-managed photo and Memory Card copies.
+          This does not delete original photos in your device's photo library, backup files or
+          copies you have saved outside Dayfall, or data processed separately by third-party services.
         </p>
       </div>
 

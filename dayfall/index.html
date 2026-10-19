@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dayfall — A Memory Calendar · Timeborns</title>
-  <meta name="description" content="What did I actually do that day? Dayfall is a local-first memory calendar that helps you recall the past through photos, places, notes, and events." />
+  <title>Dayfall — Memory Calendar for Android · Timeborns</title>
+  <meta name="description" content="Dayfall is a local-first memory calendar for photos, places, notes, and important dates. Available on Google Play in South Korea, Japan, Taiwan, and Singapore." />
   <link rel="canonical" href="https://timeborns.com/dayfall/" />
-  <meta property="og:title"       content="Dayfall — A Memory Calendar · Timeborns" />
-  <meta property="og:description" content="A memory calendar for the days you lived. Recall photos, meaningful places, notes, and important dates with local-first storage. Android — coming soon." />
+  <meta property="og:title"       content="Dayfall — Memory Calendar for Android · Timeborns" />
+  <meta property="og:description" content="A memory calendar for the days you lived. Recall photos, meaningful places, notes, and important dates with local-first storage. Now available on Google Play for Android." />
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://timeborns.com/dayfall/" />
   <meta property="og:image"       content="https://timeborns.com/assets/images/og-dayfall.jpg" />
@@ -41,6 +41,18 @@
     .dayfall-page .dayfall-more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .dayfall-page .dayfall-get { max-width: 760px; min-height: 0; }
     .dayfall-page .dayfall-get p:last-child { margin-bottom: 0; }
+    .dayfall-page .page-status-badge { max-width: 100%; color: var(--ink-mid); }
+    .dayfall-page .dayfall-store-link {
+      max-width: 100%;
+      min-height: 44px;
+      white-space: normal;
+      justify-content: center;
+      text-align: center;
+    }
+    .dayfall-page .dayfall-store-link:focus-visible {
+      outline: 3px solid var(--ink);
+      outline-offset: 4px;
+    }
     .dayfall-page .permission-card p + p { margin-top: 12px; }
     .dayfall-page .dayfall-copy a { text-decoration: underline; text-underline-offset: 3px; }
     .dayfall-page .footer-link { min-width: 0; }
@@ -83,9 +95,10 @@
           <span>Dayfall</span>
         </nav>
         <span class="page-hero-eyebrow">App · Recall &amp; Reflect</span>
-        <span class="page-status-badge">Android · Coming soon</span>
+        <span class="page-status-badge">Android · Available on Google Play</span>
         <h1 class="page-hero-title" id="dayfallTitle">Dayfall</h1>
         <p class="page-hero-sub">A memory calendar for the days you lived.</p>
+        <a class="btn btn-primary dayfall-store-link" href="https://play.google.com/store/apps/details?id=com.devstudio.dayfall">Get Dayfall on Google Play</a>
       </div>
     </section>
 
@@ -200,7 +213,7 @@
         <div class="divider-gold"></div>
         <p style="font-size:1rem;color:var(--ink-mid);line-height:1.9;margin-bottom:28px;max-width:640px;">
           Dayfall stores your memories locally and does not require a TimeBorns account
-          or provide a TimeBorns cloud sync service. Android system backup, advertising,
+          or provide a TimeBorns cloud sync service. Device-to-device transfer, advertising,
           and place-name services are separate, as described in our Privacy Policy.
         </p>
 
@@ -288,7 +301,7 @@
           <li>Location accuracy varies depending on device conditions, OS policy, battery optimization, and GPS environment.</li>
           <li>Place names may identify a neighborhood or district rather than a precise venue.</li>
           <li>Place detection and local reminders may be delayed or missed because of permissions, battery restrictions, or system settings.</li>
-          <li>Keep your encrypted backup file and password safe. Android system backup is a separate safety net whose coverage depends on device settings, storage limits, and backup rules.</li>
+          <li>Keep your encrypted backup file and password safe. Dayfall excludes locally stored memory records from Android automatic cloud backup. Device-to-device transfer may be available on supported Android versions and devices, depending on system settings and the transfer method; it does not replace your manual backup.</li>
           <li>Complete recording, backup, and recovery are not guaranteed.</li>
         </ul>
 
@@ -296,7 +309,7 @@
           <p>
             <strong>Your choices matter:</strong> Saving or sharing a Memory Card and choosing
             a backup destination can place copies outside Dayfall. Review the Privacy Policy
-            for Android backup and third-party service processing.
+            for Android backup rules, device transfer, and third-party service processing.
           </p>
         </div>
       </div>
@@ -306,15 +319,17 @@
     <section class="section" aria-labelledby="dayfallGet" style="background:var(--parchment);">
       <div class="container">
         <p class="section-label">Get Dayfall</p>
-        <h2 class="dayfall-heading" id="dayfallGet">Launching first in selected regions</h2>
+        <h2 class="dayfall-heading" id="dayfallGet">Available on Google Play</h2>
         <div class="divider-gold"></div>
         <article class="platform-card dayfall-get">
           <span class="platform-type">Android</span>
-          <h3>Coming soon on Google Play</h3>
-          <p>Dayfall has not launched on Google Play yet.</p>
-          <p>Planned initial release: South Korea, Japan, Taiwan, and Singapore. More regions will follow.</p>
+          <h3>Dayfall for Android</h3>
+          <p>A memory calendar for the days you lived, now available on Google Play.</p>
+          <p>Available in South Korea, Japan, Taiwan, and Singapore.</p>
+          <a class="btn btn-primary dayfall-store-link" href="https://play.google.com/store/apps/details?id=com.devstudio.dayfall">Get Dayfall on Google Play</a>
         </article>
-        <p class="dayfall-copy" style="margin-top:24px;">
+        <p class="dayfall-copy" style="margin-top:24px;">An iOS version has not been released.</p>
+        <p class="dayfall-copy">
           App language support: 9 languages across 10 app locales — Korean, English, Japanese,
           Chinese (Simplified and Traditional), Vietnamese, Spanish, French, German, and Indonesian.
           Language support is separate from release availability; traveling does not change
