@@ -71,7 +71,7 @@
     <div class="page-content">
 
       <div class="policy-date">
-        <strong>Effective Date:</strong> October 19, 2026 &nbsp;·&nbsp;
+        <strong>Effective Date:</strong> October 27, 2026 &nbsp;·&nbsp;
         <strong>App:</strong> Dayfall &nbsp;·&nbsp;
         <strong>Developer:</strong> Timeborns
         (<a href="mailto:timebornsofficial@gmail.com" style="color:var(--gold-dark);">timebornsofficial@gmail.com</a>)
@@ -81,7 +81,8 @@
         <h2>1. Overview</h2>
         <p>
           Dayfall is a local-first memory calendar. It helps you remember past days through
-          photos, places, notes, events, and payment traces you add yourself.
+          photos, places, notes, events, and payment traces you enter, paste, or choose
+          to record from supported card and bank app notifications.
         </p>
         <p>
           <strong>Dayfall does not require a TimeBorns account or provide a TimeBorns cloud sync service.</strong>
@@ -104,7 +105,7 @@
           <li>Representative photos, stored as optimized, app-managed local copies with thumbnails</li>
           <li>Location records derived from places you stayed for a significant amount of time (see Section 3.2)</li>
           <li>Text notes and memos you write within the app</li>
-          <li>Payment details you enter and the original payment text you paste when adding a record</li>
+          <li>Payment details entered manually, extracted from text you paste, or recorded from supported app notifications when you enable that feature; saved fields, temporary queued fields, and text retained in older records are described in Section 4</li>
           <li>Calendar events, birthdays, anniversaries, and other important dates you enter</li>
           <li>App preferences and settings</li>
         </ul>
@@ -144,11 +145,12 @@
         </p>
         <p>How location data is used:</p>
         <ul>
-          <li>Only significant stay locations (roughly 15 minutes or more of continuous presence) are recorded. Continuous movement paths are not stored.</li>
+          <li>In Android v1.0.2, a stay is confirmed after roughly 10 minutes of usable location observations within an area of about 100 metres in radius: an initial five-minute observation period followed by about five more minutes. Confirmation requires a fresh location reading within the area; elapsed time alone is not enough. Continuous movement paths are not stored.</li>
+          <li>Clear movement outside the area can reset an unconfirmed stay. For a confirmed stay, Dayfall uses a roughly five-minute departure check, taking location uncertainty into account. An in-range reading cancels a pending departure; uncertain readings do not by themselves confirm departure.</li>
           <li>Background location access, if granted, allows place detection even when the app is not actively open, so your day's location story can be reconstructed later.</li>
-          <li>Stay records are stored locally. Dayfall passes coordinates to Android's geocoding service to obtain approximate place names. The system provider may process this lookup over a network; it is not a TimeBorns cloud sync service.</li>
+          <li>Stay records are stored locally. Dayfall can use bundled administrative-area data for South Korea, Japan, Taiwan, and Singapore to look up approximate place names on the device. It also uses Android's system geocoding service when needed, passing coordinates to that service. The system provider may process the lookup over a network. Dayfall does not upload these coordinates to a TimeBorns server; system-provider processing is separate from TimeBorns cloud synchronization.</li>
           <li>Names may describe a neighborhood or district rather than an exact venue.</li>
-          <li>Location accuracy depends on your device hardware, GPS conditions, OS-level battery optimization, and network environment. Dayfall cannot guarantee complete or perfectly accurate location capture.</li>
+          <li>Location accuracy and timing depend on your device hardware, GPS conditions, OS restrictions, battery optimization, delayed location readings, and network environment. Dayfall cannot guarantee complete or perfectly accurate location capture.</li>
         </ul>
 
         <h3>3.3 Notifications</h3>
@@ -158,8 +160,20 @@
           and gentle prompts to record or reflect on your day.
         </p>
         <p>
-          All notifications are generated locally on your device.
+          Dayfall reminder notifications are generated locally on your device.
           No remote notification server is involved.
+        </p>
+
+        <h3>3.4 Optional Notification Access (Android)</h3>
+        <p>
+          Automatic payment recording requires Android's separate <strong>notification access</strong>,
+          in addition to enabling the feature in Dayfall. This is different from permission
+          for Dayfall to show its own notifications. At the operating-system level, this
+          access can expose notifications from other apps, including apps unrelated to payments.
+          Dayfall applies its own narrower filter: it checks the source app against its
+          supported card and bank app list before reading notification text, then processes
+          notifications that appear to describe a payment. Other apps' notification content
+          is ignored. The processing, storage, and controls are described in Section 4.
         </p>
       </div>
 
@@ -167,13 +181,65 @@
         <h2>4. Payment / Transaction Records</h2>
         <p>
           Dayfall lets you add payment details as memory cues by typing them yourself or
-          pasting payment message text. When a record is created from pasted text,
-          <strong>the original pasted text is stored locally with the payment record</strong>.
+          pasting payment message text. Pasting provides text you choose to supply from the
+          clipboard or input field; it does not read your SMS inbox. For new records in
+          Android v1.0.2, the app stores the payment fields and a simple manual/paste marker,
+          <strong>not the original pasted message</strong>.
+        </p>
+        <p>
+          Original pasted text saved by earlier versions may remain in existing records
+          or in backups you created. Updating the app does not automatically remove that
+          older text, and restoring an older backup can restore it. You can delete the
+          associated records in the app; copies in exported backup files must be managed separately.
         </p>
         <p>
           Dayfall does not connect to financial institutions, banks, card networks,
           or any financial API. It does not automatically access or read your SMS inbox.
-          Any payment records are added by you, stored locally, and serve as personal memory cues only.
+          Payment records are stored locally and serve as personal memory cues only.
+          Android v1.0.2 also offers the optional notification feature below.
+        </p>
+
+        <h3>4.1 Optional Payment Notification Auto-Record</h3>
+        <p>
+          This feature is off by default. It receives new notifications only after you
+          enable it in Dayfall Settings and grant Android notification access. From
+          supported card and bank apps, Dayfall analyzes eligible notification text in
+          memory on your device. The automatic recording path does not write the original
+          notification text to its temporary queue or payment database.
+        </p>
+        <ul>
+          <li><strong>Parsed fields:</strong> Approval, cancellation, or decline type; amount and currency; and merchant and transaction time when present. A record can be created without a merchant name or transaction time. Notification arrival time is used for ordering and, when necessary, the record's date; it is not presented as a known transaction time.</li>
+          <li><strong>Temporary storage:</strong> A private local queue holds the parsed fields, source app package, a duplicate-detection hash, and notification arrival time. It holds at most 100 entries. When a new, nonduplicate entry is added, entries whose notification arrival time is more than three days old are removed. This is not a timer-based guarantee of deletion exactly after three days. The queue is outside Android cloud backup and device-to-device transfer.</li>
+          <li><strong>Saved records:</strong> The app stores payment fields, a notification-source marker, approval/cancellation status, duplicate-detection information, and cancellation-link information. It attempts to suppress duplicate notifications. A cancellation is linked to an approval when a single matching record is found; otherwise, it can be kept as a separate cancelled record. Declined or failed notices are not saved as payment records.</li>
+          <li><strong>Limits:</strong> Supported apps, notification wording, available fields, Android access restrictions, and delivery timing affect recognition. Dayfall does not guarantee that every payment or cancellation will be captured or matched correctly.</li>
+        </ul>
+        <p>
+          Dayfall does not upload notification text or these payment fields to a TimeBorns
+          server. This feature does not connect to your bank or card account, initiate
+          payments, or read your SMS inbox. Advertising SDK processing and Android system
+          geocoding remain separate, as described elsewhere in this policy.
+        </p>
+
+        <h3>4.2 Stopping Automatic Recording and Deleting Payment Data</h3>
+        <p>
+          Turning the feature off in Dayfall Settings disables its notification listener,
+          stops pending parser work, and clears the temporary queue. You can also revoke
+          notification access in Android Settings to stop new notification delivery.
+          Revoking access does not itself clear the queue: previously received fields
+          may still be processed when Dayfall next reads it. The queue file is removed
+          when Dayfall takes its entries for processing.
+        </p>
+        <p>
+          Turning the feature off or revoking access does not delete saved payment records.
+          You can delete records in the app. Settings &gt; Delete all data removes saved
+          records and clears queued payment fields. To stop future notification collection,
+          also turn the feature off or revoke notification access.
+        </p>
+        <p>
+          Saved payment records may be included in an encrypted manual backup you choose
+          to create or in eligible device-to-device transfer under Section 6. Deleting
+          records in Dayfall does not remove copies in backup files you saved elsewhere.
+          The temporary notification queue is excluded from Android backup and transfer.
         </p>
       </div>
 
